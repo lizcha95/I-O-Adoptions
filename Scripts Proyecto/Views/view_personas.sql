@@ -1,0 +1,9 @@
+create or replace view view_all_data_personas as
+  select p.cedula_persona, p.nombre, p.apellido, p.fecha_nacimiento, u.username, 
+         tu.tipo_usuario, t.numero_telefono, vd.nombre_pais, vd.nombre_provincia, 
+         vd.nombre_canton, vd.direccion_exacta
+  from adoptante a, persona p, usuarios u, telefono t, tipo_usuario tu,
+       view_direcciones vd
+  where a.id_adoptante = p.id_persona and p.usuario_username = u.username and 
+        p.id_persona = t.id_persona and p.tipo_usuario = tu.id_tipo_usuario and 
+        vd.id_direccion = p.id_direccion;

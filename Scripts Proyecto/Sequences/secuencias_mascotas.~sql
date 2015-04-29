@@ -1,0 +1,151 @@
+-- Secuencia para ID motivo_devolución
+
+CREATE SEQUENCE sec_motivo_devolucion
+START WITH  0
+INCREMENT BY 1
+MINVALUE 0
+MAXVALUE 10000000
+NOCACHE
+NOCYCLES;
+
+-- Secuencia para ID estado_físico
+
+CREATE SEQUENCE sec_estado_físico
+START WITH  0
+INCREMENT BY 1
+MINVALUE 0
+MAXVALUE 10000000
+NOCACHE
+NOCYCLES;
+
+-- Secuencia para ID estado_crecimiento
+
+CREATE SEQUENCE sec_estado_crecimiento
+START WITH  0
+INCREMENT BY 1
+MINVALUE 0
+MAXVALUE 10000000
+NOCACHE
+NOCYCLES;
+
+-- Secuencia para ID tipo_mascota
+
+CREATE SEQUENCE sec_tipo_mascota
+START WITH  0
+INCREMENT BY 1
+MINVALUE 0
+MAXVALUE 10000000
+NOCACHE
+NOCYCLES;
+
+-- Secuencia para ID raza_mascota
+
+CREATE SEQUENCE sec_raza_mascota
+START WITH  0
+INCREMENT BY 1
+MINVALUE 0
+MAXVALUE 10000000
+NOCACHE
+NOCYCLES;
+
+-- Secuencia para ID mascota
+
+CREATE SEQUENCE sec_mascota
+START WITH  0
+INCREMENT BY 1
+MINVALUE 0
+MAXVALUE 10000000
+NOCACHE
+NOCYCLES;
+
+-- Secuencia para ID tamanno_mascota
+
+CREATE SEQUENCE sec_tamanno_mascota
+START WITH  0
+INCREMENT BY 1
+MINVALUE 0
+MAXVALUE 10000000
+NOCACHE
+NOCYCLES;
+
+-- Secuencia para ID color_mascota
+
+CREATE SEQUENCE sec_color_mascota
+START WITH  0
+INCREMENT BY 1
+MINVALUE 0
+MAXVALUE 10000000
+NOCACHE
+NOCYCLES;
+
+-- Secuencia para ID enfermedades_mascota
+
+CREATE SEQUENCE sec_enfermedades_mascota
+START WITH  0
+INCREMENT BY 1
+MINVALUE 0
+MAXVALUE 10000000
+NOCACHE
+NOCYCLES;
+
+-- Secuencia para ID tratamientos_enfermedades
+
+CREATE SEQUENCE sec_tratamientos_enfermedades
+START WITH  0
+INCREMENT BY 1
+MINVALUE 0
+MAXVALUE 10000000
+NOCACHE
+NOCYCLES;
+
+-- Secuencia para ID medicinas
+
+CREATE SEQUENCE sec_medicinas
+START WITH  0
+INCREMENT BY 1
+MINVALUE 0
+MAXVALUE 10000000
+NOCACHE
+NOCYCLES;
+
+-- Secuencia para ID medicinas
+
+CREATE SEQUENCE sec_medicinas
+START WITH  0
+INCREMENT BY 1
+MINVALUE 0
+MAXVALUE 10000000
+NOCACHE
+NOCYCLES;
+
+-- Secuencia para actividad_fisica
+
+CREATE SEQUENCE sec_actividad_fisica
+START WITH  0
+INCREMENT BY 1
+MINVALUE 0
+MAXVALUE 10000000
+NOCACHE
+NOCYCLES;
+
+-- Secuencia para ID estado_adopcion
+
+CREATE SEQUENCE sec_estado_adopcion
+START WITH  0
+INCREMENT BY 1
+MINVALUE 0
+MAXVALUE 10000000
+NOCACHE
+NOCYCLES;
+
+
+
+
+
+
+
+
+
+
+
+

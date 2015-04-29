@@ -1,0 +1,27 @@
+insert into tipo_mascota(id_tipo_mascota, tipo_mascota)
+  values(sec_tipo_mascota.nextval, 'Gato');
+  
+insert into tipo_mascota(id_tipo_mascota, tipo_mascota)
+  values(sec_tipo_mascota.nextval, 'Perro');
+  
+insert into tipo_mascota(id_tipo_mascota, tipo_mascota)
+  values(sec_tipo_mascota.nextval, 'Vaca');
+
+insert into tipo_mascota(id_tipo_mascota, tipo_mascota)
+  values(sec_tipo_mascota.nextval, 'Caballo');
+
+insert into tipo_mascota(id_tipo_mascota, tipo_mascota)
+  values(sec_tipo_mascota.nextval, 'Dragón de Comodo');
+
+insert into tipo_mascota(id_tipo_mascota, tipo_mascota)
+  values(sec_tipo_mascota.nextval, 'Rinoceronte');
+
+insert into tipo_mascota(id_tipo_mascota, tipo_mascota)
+  values(sec_tipo_mascota.nextval, 'Elefante');
+
+insert into tipo_mascota(id_tipo_mascota, tipo_mascota)
+  values(sec_tipo_mascota.nextval, 'Hamster');
+  
+commit;
+
+Select * from tipo_mascota

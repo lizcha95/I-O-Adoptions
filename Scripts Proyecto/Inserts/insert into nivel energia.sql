@@ -1,0 +1,10 @@
+insert into User1.nivel_energia ( Id_Nivel_Energia, Nivel_Energia)
+values ( sec_nivel_energia.nextval, 'alta');
+
+insert into User1.nivel_energia ( Id_Nivel_Energia, Nivel_Energia)
+values ( sec_nivel_energia.nextval, 'intermedia');
+
+insert into User1.nivel_energia ( Id_Nivel_Energia, Nivel_Energia)
+values ( sec_nivel_energia.nextval, 'baja');
+
+commit;

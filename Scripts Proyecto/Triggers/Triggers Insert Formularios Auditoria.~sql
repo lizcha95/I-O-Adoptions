@@ -1,0 +1,104 @@
+-- triggerss afters inserts:
+-- Tabla Item
+
+create or replace trigger trigger_insert_items
+    after insert on user1.item
+    
+    for each row
+    begin 
+    :new fec_creacion := sysdate;
+    :new usuario_creacion := user;
+    :new usuario_ultima_modificacion := user;
+    :new fec_ultima_modificacion := sysdate;
+end;
+
+-- Tabla Enunciados
+
+create or replace trigger trigger_insert_Enunciados
+    after insert on user1.Enunciados
+    
+    for each row
+    begin 
+    :new fec_creacion := sysdate;
+    :new usuario_creacion := user;
+    :new usuario_ultima_modificacion := user;
+    :new fec_ultima_modificacion := sysdate;
+end;
+
+-- Tabla Enunciados
+
+create or replace trigger trigger_insert_Preguntas
+    after insert on user1.Preguntas
+    
+    for each row
+    begin 
+    :new fec_creacion := sysdate;
+    :new usuario_creacion := user;
+    :new usuario_ultima_modificacion := user;
+    :new fec_ultima_modificacion := sysdate;
+end;
+
+-- Tabla Formularios
+
+create or replace trigger trigger_insert_Formularios
+    after insert on user1.Formularios
+    
+    for each row
+    begin 
+    :new fec_creacion := sysdate;
+    :new usuario_creacion := user;
+    :new usuario_ultima_modificacion := user;
+    :new fec_ultima_modificacion := sysdate;
+end;
+
+-- Tabla Tipo_Formulario
+
+create or replace trigger trigger_insert_Tipo_Formulario
+    after insert on user1.Tipo_Formulario
+    
+    for each row
+    begin 
+    :new fec_creacion := sysdate;
+    :new usuario_creacion := user;
+    :new usuario_ultima_modificacion := user;
+    :new fec_ultima_modificacion := sysdate;
+end;
+
+-- Tabla Preguntas_Formularios
+
+create or replace trigger trigger_insert_Preguntas_Formularios
+    after insert on user1.Preguntas_Formularios
+    
+    for each row
+    begin 
+    :new fec_creacion := sysdate;
+    :new usuario_creacion := user;
+    :new usuario_ultima_modificacion := user;
+    :new fec_ultima_modificacion := sysdate;
+end;
+
+-- Tabla Formularios_Respuestas
+
+create or replace trigger trigger_insert_Formularios_Respuestas
+    after insert on user1.Formularios_Respuestas
+    
+    for each row
+    begin 
+    :new fec_creacion := sysdate;
+    :new usuario_creacion := user;
+    :new usuario_ultima_modificacion := user;
+    :new fec_ultima_modificacion := sysdate;
+end;
+
+-- Tabla Formularios_Aceptados
+
+create or replace trigger trigger_insert_Formularios_Aceptados
+    after insert on user1.Formularios_Aceptados
+    
+    for each row
+    begin 
+    :new fec_creacion := sysdate;
+    :new usuario_creacion := user;
+    :new usuario_ultima_modificacion := user;
+    :new fec_ultima_modificacion := sysdate;
+end;

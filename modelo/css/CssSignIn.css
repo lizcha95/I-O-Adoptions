@@ -1,0 +1,136 @@
+@charset "utf-8";
+/* CSS Document */
+body{
+    -webkit-background-size: cover;
+    -moz-background-size:cover;
+    -o-background-size:cover;
+    background-size:cover;
+}
+
+#Logo{
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+#datos{
+    float: left;
+}
+
+#Nombre{width: 198px;margin-bottom: 15px}
+#Apellido{width: 198px;margin-bottom: 15px}
+#Cedula{width: 198px;margin-bottom: 15px}
+#Telefono{width: 198px;margin-bottom: 15px}
+#Correo{width: 194px;margin-bottom: 15px}
+
+#nombre{font-family: Helvetica; font-size:15px;line-height:1.2em;padding:3px 0 3px 0;color:#fff;font-weight:700;margin-bottom: 15px}
+#apellido{font-family: Helvetica; font-size:15px;line-height:1.2em;padding:3px 0 3px 0;color:#fff;font-weight:700;margin-bottom: 15px}
+#cedula{font-family: Helvetica; font-size:15px;line-height:1.2em;padding:3px 0 3px 0;color:#fff;font-weight:700 ;margin-bottom: 15px}
+#fecha{font-family: Helvetica; font-size:15px;line-height:1.2em;padding:3px 0 3px 0;color:#fff;font-weight:700;margin-bottom: 15px}
+#telefono{font-family: Helvetica; font-size:15px;line-height:1.2em;padding:3px 0 3px 0;color:#fff;font-weight:700;margin-bottom: 15px}
+#correo{font-family: Helvetica; font-size:15px;line-height:1.2em;padding:3px 0 3px 0;color:#fff;font-weight:700;margin-bottom: 15px}
+
+#Fecha{width: 197px;margin-bottom: 15px}
+
+#Pais{ width: 198px;margin-bottom: 15px}
+#Provincia{width: 198px;margin-bottom: 15px}
+#Canton{width: 198px;margin-bottom: 15px}
+#Distrito{width: 198px;margin-bottom: 15px}
+
+#pais{font-family: Helvetica; font-size:15px;line-height:1.2em;padding:3px 0 3px 0;color:#fff;font-weight:700;margin-bottom: 15px}
+#provincia{font-family: Helvetica; font-size:15px;line-height:1.2em;padding:3px 0 3px 0;color:#fff;font-weight:700;margin-bottom: 15px}
+#canton{font-family: Helvetica; font-size:15px;line-height:1.2em;padding:3px 0 3px 0;color:#fff;font-weight:700;margin-bottom: 15px}
+#distrito{font-family: Helvetica; font-size:15px;line-height:1.2em;padding:3px 0 3px 0;color:#fff;font-weight:700;margin-bottom: 15px}
+#exacta{font-family: Helvetica; font-size:15px;line-height:1.2em;padding:3px 0 3px 0;color:#fff;font-weight:700;margin-bottom: 15px}
+
+#textarea{resize: none;}
+.table{text-align: center;margin-bottom: 15px;}
+
+#user{
+    float: right;
+    margin-right: 50px;
+    list-style: none;
+}
+
+#usuario{font-family: Helvetica; font-size:15px;line-height:1.2em;padding:3px 0 3px 0;color:#fff;font-weight:700}
+#contraseña{font-family: Helvetica; font-size:15px;line-height:1.2em;padding:3px 0 3px 0;color:#fff;font-weight:700}
+#repita{font-family: Helvetica; font-size:15px;line-height:1.2em;padding:3px 0 3px 0;color:#fff;font-weight:700}
+
+#Usuario{margin-top: 10px;margin-bottom: 15px}
+#Contraseña{margin-top: 10px;margin-bottom: 15px}
+#Repita{margin-top: 10px;margin-bottom: 15px}
+
+#botonRegistrar{
+    border-radius: 7px;
+    background-color: black;
+    color: white;
+    text-align: center;
+    margin-top: 10px;
+    font-family: Helvetica; font-size:15px;line-height:1.2em;padding:3px 0 3px 0;color:#fff;font-weight:700;
+    width: 174px
+}
+
+#botonRegistrar:link {
+    text-decoration:none;
+    color:white;
+    background-color:black ;
+} 
+
+#botonRegistrar:visited {
+    text-decoration:none;
+    color:white;
+    background-color:black ;
+} 
+
+#botonRegistrar:active {
+    text-decoration:none;
+    color:black;
+    background-color:white ;
+} 
+
+#botonRegistrar:hover {
+    text-decoration:none;
+    color:black;
+    background-color:white ;
+} 
+
+#imagen{
+    border-color: white;
+    border-style: groove;
+    width: 150px;
+    height: 150px;   
+    margin-left: 20px;
+}
+
+#botonSubirFoto{
+    border-radius: 7px;
+    background-color: black;
+    color: white;
+    text-align: center;
+    margin-top: 10px;
+    margin-left: 20px;
+    font-family: Helvetica; font-size:15px;line-height:1.2em;padding:3px 0 3px 0;color:#fff;font-weight:700
+}
+
+#botonSubirFoto:link {
+    text-decoration:none;
+    color:white;
+    background-color:black ;
+} 
+
+#botonSubirFoto:visited {
+    text-decoration:none;
+    color:white;
+    background-color:black ;
+} 
+
+#botonSubirFoto:active {
+    text-decoration:none;
+    color:black;
+    background-color:white ;
+} 
+
+#botonSubirFoto:hover {
+    text-decoration:none;
+    color:black;
+    background-color:white ;
+}

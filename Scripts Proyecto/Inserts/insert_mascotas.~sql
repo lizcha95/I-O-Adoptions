@@ -1,0 +1,15 @@
+insert into mascota(id_mascota, cedula_duenio_anterior, nombre_mascota, foto_anterior, foto_despues, id_estado_crecimiento, 
+                    id_estado_fisico, id_raza_mascota, id_tamanio_mascota, id_color_mascota, id_facilidad_entrenamiento, 
+                    id_actividad_fisica, id_nivel_energia, id_duennoanterior, id_estado_adopcion, cantidad_devoluciones)
+                    
+values(sec_mascota.nextval, 16070870, 'Juancho', '', '', 2, 1, 12, 3, 2, 3, 1, 1, 123456788, 2, 0);
+
+insert into mascota(id_mascota, cedula_duenio_anterior, nombre_mascota, foto_anterior, foto_despues, id_estado_crecimiento, 
+                    id_estado_fisico, id_raza_mascota, id_tamanio_mascota, id_color_mascota, id_facilidad_entrenamiento, 
+                    id_actividad_fisica, id_nivel_energia, id_duennoanterior, id_estado_adopcion, cantidad_devoluciones)
+                    
+values(sec_mascota.nextval, 35678908, 'Waffles', '', '', 2, 1, 5, 2, 1, 3, 1, 1, 123456788, 1, 0);
+
+commit;
+
+select * from mascota

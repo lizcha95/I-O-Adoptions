@@ -1,0 +1,104 @@
+@charset "utf-8";
+/* CSS Document */
+body{
+    -webkit-background-size: cover;
+    -moz-background-size:cover;
+    -o-background-size:cover;
+    background-size:cover;
+}
+
+#Logo{
+    margin-bottom: 15px;
+}
+
+#usuario{
+    font-family: Helvetica; font-size:15px;line-height:1.2em;padding:3px 0 3px 0;color:#fff;font-weight:700;
+}
+
+#contraseña{
+    font-family: Helvetica; font-size:15px;line-height:1.2em;padding:3px 0 3px 0;color:#fff;font-weight:700;
+}
+
+#notienescuenta{
+    font-family: Helvetica; font-size:15px;line-height:1.2em;padding:3px 0 3px 0;color:#B7B7B7;font-weight:700;
+}
+
+#divUsuario{
+    float:left;
+    margin-top: 20px;
+    margin-right: 20px;
+    list-style: none;
+}
+
+#botonIngresar{
+    font-family: Helvetica; font-size:15px;line-height:1.2em;padding:3px 0 3px 0;color:#fff;font-weight:700;
+    background-color: black;
+    color:white;
+    text-align: center;
+    margin-bottom: 15px;
+    border-radius: 7px;
+    margin-left: 90px;
+    width: 180px;
+}
+
+#botonIngresar:link {
+    text-decoration:none;
+    color:white;
+    background-color:black ;
+} 
+
+#botonIngresar:visited {
+    text-decoration:none;
+    color:white;
+    background-color:black ;
+} 
+
+#botonIngresar:active {
+    text-decoration:none;
+    color:black;
+    background-color:white ;
+} 
+
+#botonIngresar:hover {
+    text-decoration:none;
+    color:black;
+    background-color: white;
+} 
+
+
+
+#botonRegistrar{
+    font-family: Helvetica; font-size:15px;line-height:1.2em;padding:3px 0 3px 0;color:#fff;font-weight:700;
+    border-radius: 7px;
+    background-color: black;
+    color: white;
+    text-align: center;
+    margin-top: 15px;
+    margin-left: 90px;
+    width: 180px;
+}
+
+#botonRegistrar:link {
+    text-decoration:none;
+    color:white;
+    background-color:black ;
+} 
+
+#botonRegistrar:visited {
+    text-decoration:none;
+    color:white;
+    background-color:black ;
+} 
+
+#botonRegistrar:active {
+    text-decoration:none;
+    color:black;
+    background-color:white ;
+} 
+
+#botonRegistrar:hover {
+    text-decoration:none;
+    color:black;
+    background-color:white ;
+} 
+

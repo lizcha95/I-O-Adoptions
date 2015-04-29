@@ -1,0 +1,148 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>I/O ADOPTIONS</title>
+<link rel="stylesheet" href="css/CssSignIn.css" type="text/css" media="all">
+    <script>
+        function ajaxRegistrar(nombre, apellido, cedula, fecha, telefono, correo, pais, provincia, canton, direc_exacta, usuario,                                contrasena)
+        {
+        var xmlhttp;
+        if (window.XMLHttpRequest)
+            {// code for IE7+, Firefox, Chrome, Opera, Safari
+            xmlhttp=new XMLHttpRequest();
+            }
+        else
+            {// code for IE6, IE5
+            xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+            }
+        xmlhttp.onreadystatechange=function()
+            {
+            if (xmlhttp.readyState==4 && xmlhttp.status==200)
+              {
+              document.getElementById("myDiv").innerHTML=xmlhttp.responseText;
+              }
+            }
+        xmlhttp.open("POST","prueba_select.php",true);
+        xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+        xmlhttp.send("Nombre = nombre & Apellido = apellido&Cedula = cedula & Fecha  = fecha & Telefono = telefono & Correo =                          correo & Pais = pais & Provincia = provincia & Canton = canton & textarea = direc_exacta & Usuario = usuario &                      Contraseña = contrasena");
+        }
+        
+        function get_id_provincia(provincia)
+        {
+        var xmlhttp;
+        if (window.XMLHttpRequest)
+            {// code for IE7+, Firefox, Chrome, Opera, Safari
+            xmlhttp=new XMLHttpRequest();
+            }
+        else
+            {// code for IE6, IE5
+            xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+            }
+        xmlhttp.onreadystatechange=function()
+            {
+            if (xmlhttp.readyState==4 && xmlhttp.status==200)
+              {
+              document.getElementById("myDiv").innerHTML=xmlhttp.responseText;
+              }
+            }
+        xmlhttp.open("POST","insert_dropdown_menu.php",true);
+        xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+        xmlhttp.send("Provincia ="+provincia);
+        }
+</script>
+</head>
+
+<body background = "images/BackgroundSignIn.jpg">
+    <div id = "Logo"><IMG SRC = "images/logo2.png"></div>
+    <div id = "datos">    
+    <table>
+        <tr>
+            <td><font id = "nombre" color="white" face = Helvetica size="3">Nombre:</font></td>    
+            <td><input id="Nombre" type="text" name="usuario"></td>
+            <td><font id = "correo" color="white" face = Helvetica size="3">Correo:</font></td>
+            <td><input id="Correo" type="text" name="usuario"></td>
+        </tr>
+        <tr>
+            <td><font id = "apellido" color="white" face = Helvetica size="3">Apellido:</font></td>
+            <td><input id="Apellido" type="text" name="usuario"></td>
+            <td><font id = "pais" color="white" face = Helvetica size="3">Pais:</font></td>    
+            <td><SELECT id = "Pais" NAME="selCombo" SIZE=1 > 
+                    <OPTION VALUE="1">Costa Rica</OPTION>
+                </SELECT></td>
+        </tr>
+        <tr>
+            <td><font id = "cedula" color="white" face = Helvetica size="3">Cedula:</font></td>
+            <td><input id="Cedula" type="text" name="usuario"></td>
+            <td><font id = "provincia" color="white" face = Helvetica size="3">Provincia:</font></td>
+            <td><SELECT id = "Provincia" NAME="selCombo" SIZE=1 > 
+                    <OPTION VALUE="1">San Jose</OPTION>
+                    <OPTION VALUE="1">Alajuela</OPTION>
+                    <OPTION VALUE="1">Cartago</OPTION>
+                    <OPTION VALUE="1">Heredia</OPTION>
+                    <OPTION VALUE="1">Guanacaste</OPTION>
+                    <OPTION VALUE="1">Puntarenas</OPTION>
+                    <OPTION VALUE="1">Limon</OPTION>
+                </SELECT></td>
+        </tr>
+        <tr>
+            <td><font id = "fecha" color="white" face = Helvetica size="3">Fecha de nacimiento:</font></td>
+            <td><input id = "Fecha" type="date" name="fecha"></td>
+            <td><font id = "canton" color="white" face = Helvetica size="3">Canton:</font></td>
+            <td><SELECT id = "Canton" NAME="selCombo" SIZE=1 > 
+                    <OPTION VALUE="1">Cantones 1</OPTION>
+                    <OPTION VALUE="1">Cantones 2</OPTION>
+                    <OPTION VALUE="1">Cantones 3</OPTION>
+                    <OPTION VALUE="1">Cantones 4</OPTION>
+                    <OPTION VALUE="1">Cantones 5</OPTION>
+                    <OPTION VALUE="1">Cantones 6</OPTION>
+                    <OPTION VALUE="1">Cantones 7</OPTION>
+                </SELECT></td>
+        </tr>
+        <tr>
+            <td><font id = "telefono" color="white" face = Helvetica size="3">Telefono:</font></td>
+            <td><input id="Telefono" type="text" name="usuario"></td>
+            <td><font id = "distrito"  color="white" face = Helvetica size="3">Distrito:</font></td>
+            <td><SELECT id = "Distrito" NAME="selCombo" SIZE=1 > 
+                    <OPTION VALUE="1">Distritos 1</OPTION>
+                    <OPTION VALUE="1">Distritos 2</OPTION>
+                    <OPTION VALUE="1">Distritos 3</OPTION>
+                    <OPTION VALUE="1">Distritos 4</OPTION>
+                    <OPTION VALUE="1">Distritos 5</OPTION>
+                    <OPTION VALUE="1">Distritos 6</OPTION>
+                    <OPTION VALUE="1">Distritos 7</OPTION>
+                </SELECT></td>
+        </tr>
+        <tr>
+            <td></td><td></td>
+            <td><font id = "exacta" color="white" face = Helvetica size="3">Direccion Exacta:</font></td>
+            <td><textarea id = "textarea" rows="4" cols="25"></textarea></td>
+        </tr>     
+    </table>
+    </div>
+        
+   
+        
+    <div id = "user">
+        <li><font id = "usuario" color="white" face = Helvetica size="3">Usuario:</font></li>
+        <li><input id = "Usuario" type="text" name="usuario"></li>
+        <li><font id = "contraseña" color="white" face = Helvetica size="3">Contraseña:</font></li>
+        <li><input id = "Contraseña" type="password" name="usuario"></li>
+        <li><font id = "repita" color="white" face = Helvetica size="3">Repita la contraseña:</font></li>
+        <li><input id = "Repita" type="password" name="usuario"></li>
+        <li><div id = "botonRegistrar" style="cursor: pointer" onclick="ajaxRegistrar(Nombre.value, Apellido.value, Cedula.value, Fecha.value, Telefono.value, Correo.value, Pais.value, Provincia.value, Canton.value, textarea.value, Usuario.value, Contraseña.value)"> Registrar </div></li>
+    </div>
+	<div id = "myDiv"></div>
+     <div id = foto>
+         <table>
+            <tr>
+                <td><IMG id= "imagen" SRC=""></IMG></td>
+            </tr>
+            <tr>
+                <td><div id = "botonSubirFoto" style="cursor: pointer" onclick="window.location='index.html"> Subir Foto </div></td>
+             </tr>
+         </table>
+         
+    </div>
+</body>
+</html>

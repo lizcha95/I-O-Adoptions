@@ -1,0 +1,22 @@
+insert into provincia(id_provincia, nombre_provincia)
+values(sec_provincia.nextval, 'Alajuela');
+
+insert into provincia(id_provincia, nombre_provincia)
+values(sec_provincia.nextval, 'San José');
+
+insert into provincia(id_provincia, nombre_provincia)
+values(sec_provincia.nextval, 'Puntarenas');
+
+insert into provincia(id_provincia, nombre_provincia)
+values(sec_provincia.nextval, 'Limón');
+
+insert into provincia(id_provincia, nombre_provincia)
+values(sec_provincia.nextval, 'Heredia');
+
+insert into provincia(id_provincia, nombre_provincia)
+values(sec_provincia.nextval, 'Guanacaste');
+
+insert into provincia(id_provincia, nombre_provincia)
+values(sec_provincia.nextval, 'Cartago');
+
+commit;

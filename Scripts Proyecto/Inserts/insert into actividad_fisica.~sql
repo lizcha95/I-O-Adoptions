@@ -1,0 +1,4 @@
+insert into User1.Actividad_Fisica ( Id_Actividad, Actividad_Fisica)
+values ( sec_actividad_fisica.nextval, 'Pasivo');
+
+select * from Actividad_Fisica
