@@ -15,7 +15,6 @@ if(isset($_GET["Pais"]))
         $idd = strval($col[0]);
         $nombre = utf8_encode($col[1]);
         $columna = array("id_provincia" => $idd, "nombre_provincia" => $nombre);
-        
         $provincia[] = $columna;
         
     }
@@ -23,7 +22,7 @@ if(isset($_GET["Pais"]))
     echo json_encode($provincia, JSON_UNESCAPED_UNICODE);
     oci_free_statement($stid);
     oci_close($conn);
-    
-    }
+
+}
 
 ?>

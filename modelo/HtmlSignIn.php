@@ -12,17 +12,36 @@
         {
             console.log(pPais);
             $.ajax({
-                url: 'insert_dropdown_menu.php',
+                url: 'php/get_provincias.php',
                 type: 'get',
                 dataType: 'json',
                 data: {Pais:pPais},
                 success: function(data){
                     $.each(data, function(index, provincia){
-                    
                         $("#Provincia").append(
                             $("<option></option>")
                             .text(provincia.nombre_provincia)
                             .val(provincia.id_provincia)
+                        )
+                    });   
+                    
+                }
+            });
+        }
+        function cargarDropDownCanton(pProvincia)
+        {
+            console.log(pProvincia);
+            $.ajax({
+                url: 'php/get_cantones.php',
+                type: 'get',
+                dataType: 'json',
+                data: {Provincia:pProvincia},
+                success: function(data){
+                    $.each(data, function(index, canton){
+                        $("#Canton").append(
+                            $("<option></option>")
+                            .text(canton.nombre_canton)
+                            .val(canton.id_canton)
                         )
                     });   
                     
@@ -34,7 +53,12 @@
             $("#Pais").change(function(){
                 var idPais = $(this).val();
                 cargarDropDownProvincia(idPais);            
-            });  
+            }); 
+            
+            $("#Provincia").change(function(){
+                var idProvincia = $(this).val();
+                cargarDropDownCanton(idProvincia);            
+            });
             
             $("#botonRegistrar").click(function(){
             
@@ -81,6 +105,7 @@
             <td><input id="Cedula" type="text" name="Cedula"></td>
             <td><font id = "provincia" color="white" face = Helvetica size="3">Provincia:</font></td>
             <td><SELECT id = "Provincia" NAME="Provincia" SIZE=1 > 
+                    <OPTION VALUE="1">Seleccionar</OPTION>
                     
                 </SELECT></td>
         </tr>
@@ -88,14 +113,9 @@
             <td><font id = "fecha" color="white" face = Helvetica size="3">Fecha de nacimiento:</font></td>
             <td><input id = "Fecha" type="date" name="Fecha"></td>
             <td><font id = "canton" color="white" face = Helvetica size="3">Canton:</font></td>
-            <td><SELECT id = "Canton" NAME="Canton" SIZE=1 > 
-                    <OPTION VALUE="1">Cantones 1</OPTION>
-                    <OPTION VALUE="1">Cantones 2</OPTION>
-                    <OPTION VALUE="1">Cantones 3</OPTION>
-                    <OPTION VALUE="1">Cantones 4</OPTION>
-                    <OPTION VALUE="1">Cantones 5</OPTION>
-                    <OPTION VALUE="1">Cantones 6</OPTION>
-                    <OPTION VALUE="1">Cantones 7</OPTION>
+            <td><SELECT id = "Canton" NAME="Canton" SIZE=1 >
+                     <OPTION VALUE="1">Seleccionar</OPTION>
+                
                 </SELECT></td>
         </tr>
         <tr>
@@ -124,7 +144,7 @@
                 <td><IMG id= "imagen" SRC=""></IMG></td>
             </tr>
             <tr>
-                <td><button type = "button" id = "botonSubirFoto" style="cursor: pointer" onclick="addInDropdown()"> Subir Foto </div></td>
+                <td><button type = "button" id = "botonSubirFoto" style="cursor: pointer"> Subir Foto </div></td>
              </tr>
          </table>
          
