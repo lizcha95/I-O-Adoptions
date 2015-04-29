@@ -17,13 +17,15 @@
                 dataType: 'json',
                 data: {Pais:pPais},
                 success: function(data){
+                    $("#Provincia").html("<option value='0'>Seleccionar</option>");
                     $.each(data, function(index, provincia){
+                        
                         $("#Provincia").append(
                             $("<option></option>")
                             .text(provincia.nombre_provincia)
                             .val(provincia.id_provincia)
-                        )
-                    });   
+                        );
+                    });  
                     
                 }
             });
@@ -37,12 +39,14 @@
                 dataType: 'json',
                 data: {Provincia:pProvincia},
                 success: function(data){
+                    $("#Canton").html("<option value='0'>Seleccionar</option>");
                     $.each(data, function(index, canton){
+                        
                         $("#Canton").append(
                             $("<option></option>")
                             .text(canton.nombre_canton)
                             .val(canton.id_canton)
-                        )
+                        );
                     });   
                     
                 }
@@ -61,10 +65,10 @@
             });
             
             $("#botonRegistrar").click(function(){
-            
+                console.log('holis');
                 $.ajax({
-                    url: 'agregar_usuario.php',
-                    type: 'post',
+                    url: 'php/agregar_usuario.php',
+                    type: 'get',
                     dataType: 'json',
                     data: $("#frmUsuario").serialize(),
                     success: function(data){
@@ -72,7 +76,7 @@
 
                     }
                 });
-                
+                //document.write("");
             });
         });
     </script>
@@ -133,10 +137,10 @@
         <li><font id = "usuario" color="white" face = Helvetica size="3">Usuario:</font></li>
         <li><input id = "Usuario" type="text" name="Usuario"></li>
         <li><font id = "contraseña" color="white" face = Helvetica size="3">Contraseña:</font></li>
-        <li><input id = "Contraseña" type="password" name="Contraseña"></li>
+        <li><input id = "Contrasena" type="password" name="Contrasena"></li>
         <li><font id = "repita" color="white" face = Helvetica size="3">Repita la contraseña:</font></li>
-        <li><input id = "Repita" type="password" name="Repita"></li>
-        <li><button type="button"id = "botonRegistrar" style="cursor: pointer"> Registrar </button></li>
+        <li><input id = "Repita" type="password"></li>
+        <li><button type="button" id = "botonRegistrar" style="cursor: pointer"> Registrar </button></li>
     </div>
      <div id = foto>
          <table>

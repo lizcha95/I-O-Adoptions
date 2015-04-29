@@ -1,43 +1,47 @@
 <?php
 
 $conn = oci_connect('User1', 'User1', 'PROYECTOUNO');
-if ($conn)
-    echo "Great Success";
-else
+if (!$conn)
     echo "Connection Failure";
 
-$Nombre = ($_POST["Nombre"]);
-$Apellido = ($_POST["Apellido"]);
-$Cedula = ($_POST["Cedula"]);
-$Fecha = ($_POST["Fecha"]);
-$Telefono = ($_POST["Telefono"]);
-$Correo = ($_POST["Correo"]);
-$Pais = ($_POST["Pais"]);
-$Provincia = ($_POST["Provincia"]);
-$Canton = ($_POST["Canton"]);
-$Direccion = ($_POST["Direccion"]);
-$Usuario = ($_POST["Usuario"]);
-$Contrasena = ($_POST["Contraseña"]);
+$Nombre = ($_GET["Nombre"]);
+$Apellido = ($_GET["Apellido"]);
+$Cedula = ($_GET["Cedula"]);
+$Fecha = ($_GET["Fecha"]);
+//$Telefono = ($_GET["Telefono"]); <---------------------------ARREGLAR************************ssdbshdfsf
+$Telefono = "123456789";
+$Correo = ($_GET["Correo"]);
+$Pais = ($_GET["Pais"]);
+$Provincia = ($_GET["Provincia"]);
+$Canton = ($_GET["Canton"]);
+$Direccion = ($_GET["Direccion"]);
+$Usuario = ($_GET["Usuario"]);
+$Contrasena = ($_GET["Contrasena"]);
 
-$stid = oci_parse($conn, 'begin addUsuarioRegular(:pNombre, :pApellido, :pCedula, :pFecha_nacimiento, :pTelefono, :pCorreo,
+$stid = oci_parse($conn, "begin addUsuarioRegular(:pNombre, :pApellido, :pCedula, TO_DATE (:pFecha_nacimiento, 'mm/dd/yyyy'), :pTelefono, :pCorreo,
                                                   :pId_pais, :pId_provincia, :pId_Canton, :pDireccion_exacta, :pNombre_Usuario,
-                                                  :pContrasena); end;');
+                                                  :pContrasena); end;");
 
 oci_bind_by_name($stid, ':pNombre', $Nombre);
 oci_bind_by_name($stid, ':pApellido', $Apellido);
-oci_bind_by_name($stid, ':pCedula', $Cedula, 10);
+oci_bind_by_name($stid, ':pCedula', $Cedula);
 oci_bind_by_name($stid, ':pFecha_nacimiento', $Fecha);
-oci_bind_by_name($stid, ':pTelefono', $Telefono, 10);
+oci_bind_by_name($stid, ':pTelefono', $Telefono);
 oci_bind_by_name($stid, ':pCorreo', $Correo);
-oci_bind_by_name($stid, ':pId_pais', $Pais, 10);
-oci_bind_by_name($stid, ':pId_provincia', $Provincia, 10);
-oci_bind_by_name($stid, ':pId_Canton', $Canton, 10);
+oci_bind_by_name($stid, ':pId_pais', $Pais);
+oci_bind_by_name($stid, ':pId_provincia', $Provincia);
+oci_bind_by_name($stid, ':pId_Canton', $Canton);
 oci_bind_by_name($stid, ':pDireccion_exacta', $Direccion);
 oci_bind_by_name($stid, ':pNombre_Usuario', $Usuario);
 oci_bind_by_name($stid, ':pContrasena', $Contrasena);
 
+echo $Nombre.', '.$Apellido.', '.$Cedula.', '.$Fecha.', '.$Telefono.', '.$Correo.', '.$Pais.', '.$Provincia.', '.$Canton.', '.$Direccion.', '.$Usuario.', '.$Contrasena;
+
 oci_execute($stid);
-oci_commit($conn);                                                
+
+oci_commit($conn);
+$e = oci_error($stid);
+echo $e['message'];
 oci_free_statement($stid);
 oci_close($conn);
 
