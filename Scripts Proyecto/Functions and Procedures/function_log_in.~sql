@@ -1,0 +1,8 @@
+CREATE OR REPLACE FUNCTION verificar_Usuario(pUsername in number, pPassword in number)
+       RETURN number 
+       as ret_result number(1);
+       BEGIN
+           select count(1) into ret_result
+                  from usuarios u
+                  where u.username = pUsername and u.contrasenia = pPassword;
+       END verificar_Usuario;
