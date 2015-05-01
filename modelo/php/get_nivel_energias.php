@@ -2,8 +2,6 @@
 
 $conn = oci_connect('User1', 'User1', 'PROYECTOUNO');
 
-
-
 $stid = oci_parse($conn, 'select * from TABLE(get_nivel_energias())');
 oci_execute($stid);
 
