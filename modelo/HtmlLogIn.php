@@ -7,22 +7,33 @@
     
 <script src="js/jquery-1.11.2.min.js" type="application/javascript"></script>
 <script type="application/javascript">
-        
-        $(document).ready(function(){
-            $("#botonIngresar").click(function(){
-                $.ajax({
-                    url: 'php/verificar_usuario.php',
-                    type: 'get',
-                    dataType: 'json',
-                    data: $("#frmLogin").serialize(),
-                    success: function(data){
-                        if(data == 1){
-                            document.location.href="index.php";
-                        }
+    function readSetDataUser(){
+        $.ajax({
+            url: 'php/obtieneInfoUsuarios.php',
+            type: 'get',
+            dataType: 'json',
+            data: $("#frmLogin").serialize(),
+            success: function(data){
+                document.location.href="index.php";
+                $("#NombreCompleto").text(data.nombre+' '+data.apellido);
+            }
+        });
+    }
+    $(document).ready(function(){
+        $("#botonIngresar").click(function(){
+            $.ajax({
+                url: 'php/verificar_usuario.php',
+                type: 'get',
+                dataType: 'json',
+                data: $("#frmLogin").serialize(),
+                success: function(data){
+                    if(data == 1){
+                        readSetDataUser();    
                     }
-                });
+                }
             });
         });
+    });
     
 </script>
 </head>

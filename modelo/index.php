@@ -94,45 +94,39 @@
 								<div class="box1">
 									<div class="inner">
 										<a href="#" class="close" data-type="close"><span></span></a>
-                                        <h2>Nombre Apellido
+                                        <h2 id="NombreCompleto" class="NombreCompleto">
                                         </h2>
                                         <IMG id= "imagen" SRC=""></IMG>
                                         <p></p>
                                         <table>
                                             <tr>
-                                                <td><p class="pad_bot2 color1 margen"><strong>Fecha de Nacimiento: </strong></p><p>07/07/1997</p></td>
+                                                <td><p class="pad_bot2 color1 margen"><strong>Fecha de Nacimiento: </strong></p><p id="FechNac" class="FechNac"></p></td>
                                             </tr>
                                             <tr>
-                                                <td><p class="pad_bot2 color1 margen"><strong>Teléfono: </strong></p><p>86298865</p></td>
+                                                <td><p class="pad_bot2 color1 margen"><strong>Teléfono: </strong></p><p id="Telefono"></p></td>
                                             </tr>
                                             <tr>
-                                                <td><p class="pad_bot2 color1 margen"><strong>Correo: </strong></p><p>eusoulobo@hotmail.com</p></td>
+                                                <td><p class="pad_bot2 color1 margen"><strong>Correo: </strong></p><p id="Correo"></p></td>
                                             </tr>
                                             <tr>
-                                                <td><p class="pad_bot2 color1 margen"><strong>País: </strong></p><p>Tiquicia</p></td>
+                                                <td><p class="pad_bot2 color1 margen"><strong>País: </strong></p><p id="Pais"></p></td>
                                             </tr>
                                             <tr>
-                                                <td><p class="pad_bot2 color1 margen"><strong>Provincia: </strong></p><p>Cartucho</p></td>
+                                                <td><p class="pad_bot2 color1 margen"><strong>Provincia: </strong></p><p id="Provincia"></p></td>
                                             </tr>
                                             <tr>
-                                                <td><p class="pad_bot2 color1 margen"><strong>Cantón: </strong></p><p>Oreamuno</p></td>
+                                                <td><p class="pad_bot2 color1 margen"><strong>Cantón: </strong></p><p id="Canton"></p></td>
                                             </tr>
                                             <tr>
-                                                <td width = 600px><p class="pad_bot2 color1 margen"><strong>Distrito: </strong></p><p>Churuca</p></td>
+                                                <td><p class="pad_bot2 color1 margen"><strong>Dirección Exacta: </strong></p><p id="DirEx"></p></td>
                                             </tr>
                                             <tr>
-                                                <td><p class="pad_bot2 color1 margen"><strong>Dirección Exacta: </strong></p><p>50mts norte de la plaza</p></td>
-                                            </tr>
-                                            <tr>
-                                                <td><p class="pad_bot2 color1 margen"><strong>Estoy en lista negra? </strong></p><p>No</p></td>
-                                            </tr>
-                                            <tr>
-                                                <td><p class="pad_bot2 color1 margen"><strong>Calificación: </strong></p><p>5</p></td>
+                                                <td><p class="pad_bot2 color1 margen"><strong>Calificación: </strong></p><p id="Nota"></p></td>
                                             </tr>
                                             <tr>
                                                 <td><h2>Mis Mascotas</h2></td>
                                             </tr>
-                                        </table>                                        
+                                        </table>                                                                    
 									</div>
 								</div>
 							</li>
