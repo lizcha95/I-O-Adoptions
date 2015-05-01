@@ -170,76 +170,67 @@
                                         <table>
                                             <tr>
                                                 <td><font id = "labels" color="white" face = Helvetica size="3">Nombre:</font></td>    
-                                                <td><input id="Opciones" type="text" name="usuario"></td>
+                                                <td><input id="Nombre" class="Opciones" type="text" name="nombre"></td>
                                             </tr>
                                             <tr>
                                                 <td><font id = "labels" color="white" face = Helvetica size="3">Tipo:</font></td>
-                                                <td><SELECT id = "Opciones" NAME="selCombo" SIZE=1 > 
-                                                    <OPTION VALUE="1">Perro</OPTION>
-                                                    <OPTION VALUE="1">Gato</OPTION>
+                                                <td><SELECT id = "Tipo" class="Opciones" NAME="tipo" SIZE=1 > 
+                                                    <OPTION VALUE="1">Seleccionar</OPTION>
                                                 </SELECT></td>
                                             </tr>
                                             <tr>
                                                 <td><font id = "labels" color="white" face = Helvetica size="3">Raza:</font></td>
-                                                <td><SELECT id = "Opciones" NAME="selCombo" SIZE=1 > 
-                                                    <OPTION VALUE="1">Perro</OPTION>
-                                                    <OPTION VALUE="1">Gato</OPTION>
+                                                <td><SELECT id = "Raza" class="Opciones" NAME="raza" SIZE=1 > 
+                                                    <OPTION VALUE="1">Seleccionar</OPTION>
                                                 </SELECT></td>
                                             </tr>
                                             <tr>
                                                 <td><font id = "labels" color="white" face = Helvetica size="3">Tamaño:</font></td>
-                                                <td><SELECT id = "Opciones" NAME="selCombo" SIZE=1 > 
-                                                    <OPTION VALUE="1">Perro</OPTION>
-                                                    <OPTION VALUE="1">Gato</OPTION>
+                                                <td><SELECT id = "Tamano" class="Opciones" NAME="tamano" SIZE=1 > 
+                                                    <OPTION VALUE="1">Seleccionar</OPTION>
                                                 </SELECT></td>
                                             </tr>
                                             <tr>
                                                 <td><font id = "labels" color="white" face = Helvetica size="3">Color:</font></td>
-                                                <td><SELECT id = "Opciones" NAME="selCombo" SIZE=1 > 
-                                                    <OPTION VALUE="1">Perro</OPTION>
-                                                    <OPTION VALUE="1">Gato</OPTION>
+                                                <td><SELECT id = "Color" class="Opciones" NAME="color" SIZE=1 > 
+                                                    <OPTION VALUE="1">Seleccionar</OPTION>
                                                 </SELECT></td>
                                             </tr>
                                             <tr>
                                                 <td><font id = "labels" color="white" face = Helvetica size="3">Estado de Crecimiento:</font></td>
-                                                <td><SELECT id = "Opciones" NAME="selCombo" SIZE=1 > 
-                                                    <OPTION VALUE="1">Perro</OPTION>
-                                                    <OPTION VALUE="1">Gato</OPTION>
+                                                <td><SELECT id = "EstadoCrecimiento" class="Opciones" NAME="estadocrecimiento" SIZE=1 > 
+                                                    <OPTION VALUE="1">Seleccionar</OPTION>
                                                 </SELECT></td>
                                             </tr>
                                             <tr>
                                                 <td><font id = "labels" color="white" face = Helvetica size="3">Estado Fisico:</font></td>
-                                                <td><SELECT id = "Opciones" NAME="selCombo" SIZE=1 > 
-                                                    <OPTION VALUE="1">Perro</OPTION>
-                                                    <OPTION VALUE="1">Gato</OPTION>
+                                                <td><SELECT id = "EstadoFisico" class="Opciones" NAME="estadofisico" SIZE=1 > 
+                                                    <OPTION VALUE="1">Seleccionar</OPTION>
                                                 </SELECT></td>
                                             </tr>
                                             <tr>
                                                 <td><font id = "labels" color="white" face = Helvetica size="3">Facilidad de Entrenamiento: </font></td>
-                                                <td><SELECT id = "Opciones" NAME="selCombo" SIZE=1 > 
-                                                    <OPTION VALUE="1">Perro</OPTION>
-                                                    <OPTION VALUE="1">Gato</OPTION>
+                                                <td><SELECT id = "FacilidadEstrenamiento" class="Opciones" NAME="facilidadentrenamiento" SIZE=1 > 
+                                                    <OPTION VALUE="1">Seleccionar</OPTION>
                                                 </SELECT></td>
                                             </tr>
                                             <tr>
                                                 <td><font id = "labels" color="white" face = Helvetica size="3">Nivel de Energía:</font></td>
-                                                <td><SELECT id = "Opciones" NAME="selCombo" SIZE=1 > 
+                                                <td><SELECT id = "NivelEnergia" class="Opciones" NAME="nivelenergia" SIZE=1 > 
                                                     <OPTION VALUE="1">Perro</OPTION>
                                                     <OPTION VALUE="1">Gato</OPTION>
                                                 </SELECT></td>
                                             </tr>
                                             <tr>
                                                 <td><font id = "labels" color="white" face = Helvetica size="3">Actividad Fisica:</font></td>
-                                                <td><SELECT id = "Opciones" NAME="selCombo" SIZE=1 > 
-                                                    <OPTION VALUE="1">Perro</OPTION>
-                                                    <OPTION VALUE="1">Gato</OPTION>
+                                                <td><SELECT id = "ActividadFisica" class="Opciones" NAME="actividadfisica" SIZE=1 > 
+                                                    <OPTION VALUE="1">Seleccionar</OPTION>
                                                 </SELECT></td>
                                             </tr>
                                             <tr>
                                                 <td><font id = "labels" color="white" face = Helvetica size="3">Enfermedades:</font></td>
-                                                <td><SELECT id = "Opciones" NAME="selCombo" SIZE=1 > 
-                                                    <OPTION VALUE="1">Perro</OPTION>
-                                                    <OPTION VALUE="1">Gato</OPTION>
+                                                <td><SELECT id = "Enfermedades" class="Opciones" NAME="enfermedades" SIZE=1 > 
+                                                    <OPTION VALUE="1">Seleccionar</OPTION>
                                                 </SELECT></td>
                                             </tr>
                                             <tr>

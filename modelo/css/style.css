@@ -112,7 +112,7 @@ footer a:hover {color:#808080}
 #ContactForm .input {float:left;margin:0;width:525px;height:16px;background:#fff;padding:4px 10px;color:#808080;font:14px "Trebuchet MS", Arial, Helvetica, sans-serif}
 #ContactForm textarea {overflow:auto;margin:0;float:left;width:525px;height:289px;background:#fff;padding:4px 10px;color:#808080;font:14px "Trebuchet MS", Arial, Helvetica, sans-serif}
 
-#Opciones{
+.Opciones{
     width: 200px;
     margin-left: 10px;
     margin-bottom: 15px;
@@ -156,7 +156,7 @@ footer a:hover {color:#808080}
     height: 170px;
 }
 
- #labels{font-family: Helvetica; font-size:15px;line-height:1.2em;padding:17px 0 20px 0;color:#fff;font-weight:700}
+#labels{font-family: Helvetica; font-size:15px;line-height:1.2em;padding:17px 0 20px 0;color:#fff;font-weight:700}
 
 .more{overflow-y: scroll}
 
