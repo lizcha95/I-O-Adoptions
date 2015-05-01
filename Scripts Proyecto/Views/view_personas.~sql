@@ -1,4 +1,4 @@
-create or replace view view_personas as
+create or replace view view_all_data_personas as
   select p.cedula_persona, p.nombre, p.apellido, p.fecha_nacimiento, u.username, 
          tu.tipo_usuario, t.numero_telefono, vd.nombre_pais, vd.nombre_provincia, 
          vd.nombre_canton, vd.direccion_exacta
