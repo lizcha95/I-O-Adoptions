@@ -16,9 +16,9 @@
                     dataType: 'json',
                     data: $("#frmLogin").serialize(),
                     success: function(data){
-                        $.each(data, function(index, result){
-                            
-                        });
+                        if(data == 1){
+                            window.open("index.php");
+                        }
                     }
                 });
             });
