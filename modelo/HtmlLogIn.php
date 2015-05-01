@@ -17,7 +17,7 @@
                     data: $("#frmLogin").serialize(),
                     success: function(data){
                         if(data == 1){
-                            window.open("index.php");
+                            document.location.href="index.php";
                         }
                     }
                 });

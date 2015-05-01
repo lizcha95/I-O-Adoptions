@@ -18,9 +18,7 @@ $Direccion = ($_GET["Direccion"]);
 $Usuario = ($_GET["Usuario"]);
 $Contrasena = ($_GET["Contrasena"]);
 
-$stid = oci_parse($conn, "begin addUsuarioRegular(:pNombre, :pApellido, :pCedula, TO_DATE (:pFecha_nacimiento, 'mm/dd/yyyy'), :pTelefono, :pCorreo,
-                                                  :pId_pais, :pId_provincia, :pId_Canton, :pDireccion_exacta, :pNombre_Usuario,
-                                                  :pContrasena); end;");
+$stid = oci_parse($conn, "begin addUsuarioRegular(:pNombre, :pApellido, :pCedula, TO_DATE (:pFecha_nacimiento, 'yyyy/mm/dd'), :pTelefono, :pCorreo, :pId_pais, :pId_provincia, :pId_Canton, :pDireccion_exacta, :pNombre_Usuario, :pContrasena); end;");
 
 oci_bind_by_name($stid, ':pNombre', $Nombre);
 oci_bind_by_name($stid, ':pApellido', $Apellido);
