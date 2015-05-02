@@ -7,7 +7,7 @@
 		<link rel="stylesheet" href="css/layout.css" type="text/css" media="all">
 		<link rel="stylesheet" href="css/prettyPhoto.css" type="text/css" media="all">
 		<link rel="stylesheet" href="css/style.css" type="text/css" media="all">
-		<script type="text/javascript" src="js/jquery-1.6.js" ></script>
+        <script type="application/javascript" src="js/jquery-1.11.2.min.js"></script>
 		<script type="text/javascript" src="js/cufon-yui.js"></script>
 		<script type="text/javascript" src="js/cufon-replace.js"></script>
   		<script type="text/javascript" src="js/Ubuntu_400.font.js"></script>
@@ -19,14 +19,6 @@
 		<script type="text/javascript" src="js/bg.js" ></script>
 		<script type="text/javascript" src="js/tabs.js"></script>
 		<script type="text/javascript" src="js/jquery.prettyPhoto.js"></script>
-		<!--[if lt IE 9]>
-			<script type="text/javascript" src="js/html5.js"></script>
-		<![endif]-->
-		<!--[if lt IE 7]>
-			<div style='clear:both;text-align:center;position:relative'>
-				<a href="http://www.microsoft.com/windows/internet-explorer/default.aspx?ocid=ie6_countdown_bannercode"><img src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0000_us.jpg" border="0"  alt="" /></a>
-			</div>
-		<![endif]-->
 	</head>
 	<body id="page1">
 		<div class="spinner"></div>
@@ -164,7 +156,7 @@
                                         <table>
                                             <tr>
                                                 <td><font id = "labels" color="white" face = Helvetica size="3">Nombre:</font></td>    
-                                                <td><input id="Nombre" class="Opciones" type="text" name="nombre"></td>
+                                                <td><input id="NombreMascota" class="Opciones" type="text" name="nombre"></td>
                                             </tr>
                                             <tr>
                                                 <td><font id = "labels" color="white" face = Helvetica size="3">Tipo:</font></td>
@@ -352,7 +344,7 @@
 											</div>
 											<div class="col_12 pad_left1">
 												<h2>Nuestra ubicación</h2>
-												<figure><script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script><div style="overflow:hidden;height:210px;width:280px;"><div id="gmap_canvas" style="height:210px;width:280px;"></div><style>#gmap_canvas img{max-width:none!important;background:none!important}</style><a class="google-map-code" href="http://premium-wordpress-themes.org" id="get-map-data">http://premium-wordpress-themes.org</a></div><script type="text/javascript"> function init_map(){var myOptions = {zoom:14,center:new google.maps.LatLng(9.9393902,-84.04676740000002),mapTypeId: google.maps.MapTypeId.ROADMAP};map = new google.maps.Map(document.getElementById("gmap_canvas"), myOptions);marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(9.9393902, -84.04676740000002)});infowindow = new google.maps.InfoWindow({content:"<b>San Jos&eacute;</b><br/>Calle La Cruz<br/>11502 Mercedes" });google.maps.event.addListener(marker, "click", function(){infowindow.open(map,marker);});infowindow.open(map,marker);}google.maps.event.addDomListener(window, 'load', init_map);</script></figure>
+												<!--<figure><script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script><div style="overflow:hidden;height:210px;width:280px;"><div id="gmap_canvas" style="height:210px;width:280px;"></div><style>#gmap_canvas img{max-width:none!important;background:none!important}</style><a class="google-map-code" href="http://premium-wordpress-themes.org" id="get-map-data">http://premium-wordpress-themes.org</a></div><script type="text/javascript"> function init_map(){var myOptions = {zoom:14,center:new google.maps.LatLng(9.9393902,-84.04676740000002),mapTypeId: google.maps.MapTypeId.ROADMAP};map = new google.maps.Map(document.getElementById("gmap_canvas"), myOptions);marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(9.9393902, -84.04676740000002)});infowindow = new google.maps.InfoWindow({content:"<b>San Jos&eacute;</b><br/>Calle La Cruz<br/>11502 Mercedes" });google.maps.event.addListener(marker, "click", function(){infowindow.open(map,marker);});infowindow.open(map,marker);}google.maps.event.addDomListener(window, 'load', init_map);</script></figure>-->
 											</div>
 										</div>
 										<h2>Contáctenos</h2>
@@ -617,6 +609,34 @@
 			$('.spinner').fadeOut();
 			$('body').css({overflow:'inherit'})
 		})
+        var usuario = "<?php echo $Usuario = $_GET["Usuario"];?>";
+        $.ajax({
+            url: 'php/obtieneInfoUsuarios.php',
+            type: 'get',
+            dataType: 'json',
+            data: {Usuario: usuario},
+            success: function(data){
+                document.getElementById("NombreCompleto").innerHTML = data.nombre+' '+data.apellido;
+                document.getElementById("FechNac").innerHTML = data.fechaNacimiento;
+                document.getElementById("Telefono").innerHTML = data.telefono;
+                document.getElementById("Correo").innerHTML = data.correo;
+                document.getElementById("Pais").innerHTML = data.pais;
+                document.getElementById("Provincia").innerHTML = data.provincia;
+                document.getElementById("Canton").innerHTML = data.canton;
+                if(data.notAdopt == null){
+                    document.getElementById("DirEx").innerHTML = 'Dirección no especificada';
+                }
+                else{
+                    document.getElementById("DirEx").innerHTML = data.direcEx;
+                }
+                if(data.notAdopt == null){
+                    document.getElementById("Nota").innerHTML = 'Sin calificaciones';
+                }
+                else{
+                    document.getElementById("Nota").innerHTML = data.notAdopt;
+                }
+            }
+        });
 		</script>
 	</body>
 </html>

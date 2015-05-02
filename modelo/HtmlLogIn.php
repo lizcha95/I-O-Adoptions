@@ -7,18 +7,6 @@
     
 <script src="js/jquery-1.11.2.min.js" type="application/javascript"></script>
 <script type="application/javascript">
-    function readSetDataUser(){
-        $.ajax({
-            url: 'php/obtieneInfoUsuarios.php',
-            type: 'get',
-            dataType: 'json',
-            data: $("#frmLogin").serialize(),
-            success: function(data){
-                document.location.href="index.php";
-                $("#NombreCompleto").text(data.nombre+' '+data.apellido);
-            }
-        });
-    }
     $(document).ready(function(){
         $("#botonIngresar").click(function(){
             $.ajax({
@@ -28,7 +16,7 @@
                 data: $("#frmLogin").serialize(),
                 success: function(data){
                     if(data == 1){
-                        readSetDataUser();    
+                        document.location.href="index.php?Usuario="+document.getElementById("Usuario").value;    
                     }
                 }
             });
@@ -37,7 +25,7 @@
     
 </script>
 </head>
-<body background = "images/Background.jpg">
+<body background = "images/Background.jpg" id="page">
     <div id = "Logo"><IMG SRC = "images/logo2.png"></div>
     <table>
         <form id="frmLogin">
@@ -57,7 +45,7 @@
         <li></li>
         <div id = "botonIngresar" style="cursor: pointer"> Ingresar </div>
         <li><font id = "notienescuenta">No tienes cuenta?</font></li>
-        <div id = "botonRegistrar" style="cursor: pointer" onclick="window.location='HtmlSignIn.html'"> ¡Regístrate! </div>
+        <div id = "botonRegistrar" style="cursor: pointer" onclick="window.location='HtmlSignIn.php'"> ¡Regístrate! </div>
     </div>
 </body>
 </html>

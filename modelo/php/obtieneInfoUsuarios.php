@@ -7,12 +7,10 @@ if(isset($_GET["Usuario"]))
 {
     
     $Usuario = ($_GET["Usuario"]);
-    $Contrasena = ($_GET["Contrasena"]);
 
-    $stid = oci_parse($conn, 'select * from TABLE(get_data_Usuario(:pUsuario, :pContrasena))');
+    $stid = oci_parse($conn, 'select * from TABLE(get_data_Usuario(:pUsuario))');
     
     oci_bind_by_name($stid, ':pUsuario', $Usuario);
-    oci_bind_by_name($stid, ':pContrasena', $Contrasena);
     
     oci_execute($stid);
     $col = oci_fetch_array($stid);
