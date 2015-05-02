@@ -10,7 +10,6 @@
         
         function cargarDropDownProvincia(pPais)
         {
-            console.log(pPais);
             $.ajax({
                 url: 'php/get_provincias.php',
                 type: 'get',
@@ -19,11 +18,10 @@
                 success: function(data){
                     $("#Provincia").html("<option value='0'>Seleccionar</option>");
                     $.each(data, function(index, provincia){
-                        
                         $("#Provincia").append(
                             $("<option></option>")
-                            .text(provincia.nombre_provincia)
-                            .val(provincia.id_provincia)
+                            .text(provincia.descripcion)
+                            .val(provincia.id)
                         );
                     });  
                     
@@ -32,7 +30,6 @@
         }
         function cargarDropDownCanton(pProvincia)
         {
-            console.log(pProvincia);
             $.ajax({
                 url: 'php/get_cantones.php',
                 type: 'get',
@@ -41,11 +38,10 @@
                 success: function(data){
                     $("#Canton").html("<option value='0'>Seleccionar</option>");
                     $.each(data, function(index, canton){
-                        
                         $("#Canton").append(
                             $("<option></option>")
-                            .text(canton.nombre_canton)
-                            .val(canton.id_canton)
+                            .text(canton.descripcion)
+                            .val(canton.id)
                         );
                     });   
                     
@@ -65,18 +61,15 @@
             });
             
             $("#botonRegistrar").click(function(){
-                console.log('holis');
                 $.ajax({
                     url: 'php/agregar_usuario.php',
                     type: 'get',
                     dataType: 'json',
                     data: $("#frmUsuario").serialize(),
                     success: function(data){
-                       console.log("hpa"); 
-
+                        
                     }
                 });
-                //document.write("");
             });
         });
     </script>
@@ -123,9 +116,10 @@
                 </SELECT></td>
         </tr>
         <tr>
-            <td></td><td></td>
-            <td><font id = "exacta" color="white" face = Helvetica size="3">Direccion Exacta:</font></td>
-            <td><textarea id = "Direccion" name= "Direccion "rows="4" cols="25"></textarea></td>
+            <td><font id="telefono" color="white" face=Helvetica size="3">Telefono:</font></td>
+            <td><input id="Telefono" type="text" name="Telefono"></td>
+            <td><font id="exacta" color="white" face=Helvetica size="3">Direccion Exacta:</font></td>
+            <td><textarea id="Direccion" name="Direccion"></textarea></td>
         </tr>     
     </table>
         
@@ -148,7 +142,7 @@
                 <td><IMG id= "imagen" SRC=""></IMG></td>
             </tr>
             <tr>
-                <td><button type = "button" id = "botonSubirFoto" style="cursor: pointer"> Subir Foto </div></td>
+                <td><button type = "button" id = "botonSubirFoto" style="cursor: pointer" onclick="window.location='HtmlLogIn.php'"> Subir Foto </div></td>
              </tr>
          </table>
          

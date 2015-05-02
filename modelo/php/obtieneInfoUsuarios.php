@@ -34,6 +34,3 @@ if(isset($_GET["Usuario"]))
     oci_free_statement($stid);
     oci_close($conn);
 }
-
-//$columna = array("id_provincia" => $idd, "nombre_provincia" => $nombre);
-//$provincia[] = $columna;

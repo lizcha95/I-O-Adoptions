@@ -38,7 +38,7 @@
                                 <li><a href="#!/page_Busquedas"><span></span><strong>Búsquedas</strong></a></li>
 								<li><a href="#!/page_Services"><span></span><strong>Estadísticas</strong></a></li>
 								<li><a href="#!/page_Contact"><span></span><strong>Contáctenos</strong></a></li>
-                                <li><a href="HtmlLogIn.html"><span></span><strong>Cerrar Sesión</strong></a></li>
+                                <li><a href="HtmlLogIn.php"><span></span><strong>Cerrar Sesión</strong></a></li>
 							</ul>
 						</nav>
 					</header>
@@ -306,10 +306,6 @@
                                                 <p class = "tabular">40</p>
                                             <p class="pad_bot2 color1"><strong>Mascotas esperando por ser adoptadas: </strong></p>
                                                 <p class = "tabular">60</p>
-                                            <p class="pad_bot2 color1"><strong>Mascotas devueltas: </strong></p>
-                                                <p class = "tabular">5</p>
-                                            <h2>Lista de Mascotas Devueltas: </h2>
-                                                <p class = "tabular">Rocky</p>
                                                 <p class = "tabular">Yoda</p>
                                                 <p class = "tabular">Piolin</p>
                                             <h2>Lista Negra: </h2>
@@ -636,6 +632,48 @@
                     document.getElementById("Nota").innerHTML = data.notAdopt;
                 }
             }
+        });
+        $.ajax({
+            url: 'php/get_tipos_mascotas.php',
+            type: 'get',
+            dataType: 'json',
+            data: {},
+            success: function(data){
+                $("#Tipo").html("<option value='0'>Seleccionar</option>");
+                $.each(data, function(index, tipoMascota){
+                    $("#Tipo").append(
+                        $("<option></option>")
+                        .text(tipoMascota.tipo_mascota)
+                        .val(tipoMascota.id_tipo_mascota)
+                    );
+                });   
+
+            }
+        });
+        function setDropdownRazas(idTipo){
+            $.ajax({
+                url: 'php/get_razas_mascotas.php',
+                type: 'get',
+                dataType: 'json',
+                data: {tipo:idTipo},
+                success: function(data){
+                    $("#Raza").html("<option value='0'>Seleccionar</option>");
+                    $.each(data, function(index, razaMascota){
+                        $("#Raza").append(
+                            $("<option></option>")
+                            .text(razaMascota.descripcion)
+                            .val(razaMascota.id)
+                        );
+                    });   
+
+                }
+            });
+        }
+        $(document).ready(function(){
+            $("#Tipo").change(function(){
+                var idTipo = $(this).val();
+                setDropdownRazas(idTipo);            
+            }); 
         });
 		</script>
 	</body>

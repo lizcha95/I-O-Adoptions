@@ -42,7 +42,7 @@ body{
 #distrito{font-family: Helvetica; font-size:15px;line-height:1.2em;padding:3px 0 3px 0;color:#fff;font-weight:700;margin-bottom: 15px}
 #exacta{font-family: Helvetica; font-size:15px;line-height:1.2em;padding:3px 0 3px 0;color:#fff;font-weight:700;margin-bottom: 15px}
 
-#textarea{resize: none;}
+#Direccion{resize: none; column-count: 100; width: 198px; margin-bottom: 15px; height: 65px;}
 .table{text-align: center;margin-bottom: 15px;}
 
 #user{

@@ -8,8 +8,7 @@ $Nombre = ($_GET["Nombre"]);
 $Apellido = ($_GET["Apellido"]);
 $Cedula = ($_GET["Cedula"]);
 $Fecha = ($_GET["Fecha"]);
-//$Telefono = ($_GET["Telefono"]); <---------------------------ARREGLAR************************ssdbshdfsf
-$Telefono = "123456789";
+$Telefono = ($_GET["Telefono"]);
 $Correo = ($_GET["Correo"]);
 $Pais = ($_GET["Pais"]);
 $Provincia = ($_GET["Provincia"]);
@@ -39,7 +38,6 @@ oci_execute($stid);
 
 oci_commit($conn);
 $e = oci_error($stid);
-echo $e['message'];
 oci_free_statement($stid);
 oci_close($conn);
 
