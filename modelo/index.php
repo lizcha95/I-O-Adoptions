@@ -203,8 +203,7 @@
                                             <tr>
                                                 <td><font id = "labels" color="white" face = Helvetica size="3">Nivel de Energía:</font></td>
                                                 <td><SELECT id = "NivelEnergia" class="Opciones" NAME="nivelenergia" SIZE=1 > 
-                                                    <OPTION VALUE="1">Perro</OPTION>
-                                                    <OPTION VALUE="1">Gato</OPTION>
+                                                    <OPTION VALUE="1">Seleccionar</OPTION>
                                                 </SELECT></td>
                                             </tr>
                                             <tr>
@@ -242,11 +241,11 @@
                                             </form>
                                         <table>
                                             <tr>
-                                                <td><INPUT class = "radio" TYPE="radio" NAME="q1" VALUE="y"></td>
+                                                <td><INPUT class = "radio" TYPE="radio" NAME="filtroMascotas" VALUE="y"></td>
                                                 <td><p class = "Radio">Mascotas</p></td>
-                                                <td><INPUT class = "radio" TYPE="radio" NAME="q1" VALUE="n"></td>
+                                                <td><INPUT class = "radio" TYPE="radio" NAME="filtroPersonas" VALUE="n"></td>
                                                 <td><p class = "Radio">Personas</p></td>
-                                                <td><INPUT class = "radio" TYPE="radio" NAME="q1" VALUE="n"></td>
+                                                <td><INPUT class = "radio" TYPE="radio" NAME="filtroTodos" VALUE="n"></td>
                                                 <td><p class = "Radio">Todos</p></td>
                                             </tr>                                        
                                         </table>
@@ -491,107 +490,45 @@
                                         <p></p>
                                         <table>
                                             <tr>
-                                                <td><p class="pad_bot2 color1 margen"><strong>Tipo: </strong></p><p>Perro</p></td>
+                                                <td><p class="pad_bot2 color1 margen"><strong>Tipo: </strong></p><p id="tipoMascota">Perro</p></td>
                                             </tr>
                                             <tr>
-                                                <td><p class="pad_bot2 color1 margen"><strong>Raza: </strong></p><p>Doberman</p></td>
+                                                <td><p class="pad_bot2 color1 margen"><strong>Raza: </strong></p><p id="razaMascota">Doberman</p></td>
                                             </tr>
                                             <tr>
-                                                <td><p class="pad_bot2 color1 margen"><strong>Tamaño: </strong></p><p>Pequeño</p></td>
+                                                <td><p class="pad_bot2 color1 margen"><strong>Tamaño: </strong></p><p id="tamanoMascota">Pequeño</p></td>
                                             </tr>
                                             <tr>
-                                                <td><p class="pad_bot2 color1 margen"><strong>Color: </strong></p><p>Negro</p></td>
+                                                <td><p class="pad_bot2 color1 margen"><strong>Color: </strong></p><p id="colorMascota">Negro</p></td>
                                             </tr>
                                             <tr>
-                                                <td><p class="pad_bot2 color1 margen"><strong>Estado de Crecimiento: </strong></p><p>Adulto</p></td>
+                                                <td><p class="pad_bot2 color1 margen"><strong>Estado de Crecimiento: </strong></p><p id="estadoCrecimiento">Adulto</p></td>
                                             </tr>
                                             <tr>
-                                                <td><p class="pad_bot2 color1 margen"><strong>Estado Físico: </strong></p><p>Muy Bueno</p></td>
+                                                <td><p class="pad_bot2 color1 margen"><strong>Estado Físico: </strong></p><p id="estadoFisico">Muy Bueno</p></td>
                                             </tr>
                                             <tr>
-                                                <td width = 600px><p class="pad_bot2 color1 margen"><strong>Facilidad de Entrenamiento: </strong></p><p>Muy Mala</p></td>
+                                                <td width = 600px><p class="pad_bot2 color1 margen"><strong>Facilidad de Entrenamiento: </strong></p><p id="facilidadEntrenamiento">Muy Mala</p></td>
                                             </tr>
                                             <tr>
-                                                <td><p class="pad_bot2 color1 margen"><strong>Nivel de Energía: </strong></p><p>Alta</p></td>
+                                                <td><p class="pad_bot2 color1 margen"><strong>Nivel de Energía: </strong></p><p id="novelEnergia">Alta</p></td>
                                             </tr>
                                             <tr>
-                                                <td><p class="pad_bot2 color1 margen"><strong>Actividad Física: </strong></p><p>Baja</p></td>
+                                                <td><p class="pad_bot2 color1 margen"><strong>Actividad Física: </strong></p><p id="actividadFisica">Baja</p></td>
                                             </tr>
                                             <tr>
-                                                <td><p class="pad_bot2 color1 margen"><strong>Enfermedades: </strong></p><p>Ninguna</p></td>
+                                                <td><p class="pad_bot2 color1 margen"><strong>Enfermedades: </strong></p><p id="enfermedadesMascota">Ninguna</p></td>
                                             </tr>
                                             <tr>
-                                                <td><p class="pad_bot2 color1 margen"><strong>Cantidad de devoluciones: </strong></p><p>0</p></td>
+                                                <td><p class="pad_bot2 color1 margen"><strong>Cantidad de devoluciones: </strong></p><p id="cantidadDevoluciones">0</p></td>
                                             </tr>
                                             <tr>
-                                                <td><a class = "botonDatos quieroAdoptarla" style="cursor: pointer" href="#!/page_perfilMascota"> Quiero Adoptar! </a></td>
+                                                <td><a id="botonAdoptarMascota" class = "botonDatos quieroAdoptarla" style="cursor: pointer" href="#!/page_perfilMascota"> Quiero Adoptar! </a></td>
                                             </tr>
                                         </table>    
 									</div>
 								</div>
-							</li>
-                            <li id="page_perfilPersona">
-								<div class="box1">
-									<div class="inner">
-										<a href="#" class="close" data-type="close"><span></span></a>
-								        <h2>Nombre Apellido Persona</h2>
-                                        <IMG id= "imagen" SRC=""></IMG>
-                                        <p></p>
-                                        <table>
-                                            <tr>
-                                                <td><p class="pad_bot2 color1 margen"><strong>Fecha de Nacimiento: </strong></p><p>07/07/1997</p></td>
-                                            </tr>
-                                            <tr>
-                                                <td><p class="pad_bot2 color1 margen"><strong>Teléfono: </strong></p><p>86298865</p></td>
-                                            </tr>
-                                            <tr>
-                                                <td><p class="pad_bot2 color1 margen"><strong>Correo: </strong></p><p>eusoulobo@hotmail.com</p></td>
-                                            </tr>
-                                            <tr>
-                                                <td><p class="pad_bot2 color1 margen"><strong>País: </strong></p><p>Tiquicia</p></td>
-                                            </tr>
-                                            <tr>
-                                                <td><p class="pad_bot2 color1 margen"><strong>Provincia: </strong></p><p>Cartucho</p></td>
-                                            </tr>
-                                            <tr>
-                                                <td><p class="pad_bot2 color1 margen"><strong>Cantón: </strong></p><p>Oreamuno</p></td>
-                                            </tr>
-                                            <tr>
-                                                <td width = 600px><p class="pad_bot2 color1 margen"><strong>Distrito: </strong></p><p>Churuca</p></td>
-                                            </tr>
-                                            <tr>
-                                                <td><p class="pad_bot2 color1 margen"><strong>Dirección Exacta: </strong></p><p>50mts norte de la plaza</p></td>
-                                            </tr>
-                                            <tr>
-                                                <td><p class="pad_bot2 color1 margen"><strong>Estoy en lista negra? </strong></p><p>No</p></td>
-                                            </tr>
-                                            <tr>
-                                                <td><p class="pad_bot2 color1 margen"><strong>Calificación: </strong></p><p>5</p></td>
-                                            </tr>
-                                        </table> 
-                                        <div>
-                                            <table>
-                                                <tr>
-                                                    <td><p class="pad_bot2 color1 margen"><strong>Califícame: </strong></p><SELECT id = "calificacion" NAME="selCombo" SIZE=1 > 
-                                                    <OPTION VALUE="1">1</OPTION>
-                                                    <OPTION VALUE="1">2</OPTION>
-                                                    <OPTION VALUE="1">3</OPTION>
-                                                    <OPTION VALUE="1">4</OPTION>
-                                                    <OPTION VALUE="1">5</OPTION>
-                                                </SELECT></td>
-                                                </tr>
-                                                <tr>
-                                                    <td><textarea id = "textarea" rows="4" cols="25"></textarea></td>
-                                                </tr>
-                                                <tr>
-                                                    <td><a class = "botonDatos " style="cursor: pointer" href="#!/page_perfilMascota"> Calificar </a></td>
-                                                </tr>
-                                            </table>                                         
-                                        </div>                                           
-									</div>
-								</div>
-							</li>
-                            
+							</li>                            
 						</ul>
 					</article>
 <!-- / content -->   
@@ -601,6 +538,8 @@
 		</div>
 		<script type="text/javascript"> Cufon.now(); </script>
 		<script>
+            
+        //codigo que se utiliza para sacar la información del usuario
 		$(window).load(function() {
 			$('.spinner').fadeOut();
 			$('body').css({overflow:'inherit'})

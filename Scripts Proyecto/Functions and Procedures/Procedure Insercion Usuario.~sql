@@ -1,35 +1,37 @@
-create or replace procedure addMascota(
-
-pnombre_mascota Varchar2,
-pfoto_anterior varchar2, --// se supone que estaria cargada null,
-pfoto_despues varchar2, --/// claro
-pid_estado_crecimiento number,
-pid_estado_fisico number,
-pid_motivo_devolucion number,
-pid_raza_mascota number,
-pid_tamanio_mascota number,
-pid_color_mascota number,
-pid_facilidad_entrenamiento number,
-pid_actividad_fisica number,
-pid_nivel_energia number,
-pid_duennoAnterior number,
-pid_estado_adopcion number,
-pcantidad_devoluciones number ) --/ empieza en 0 // hacer trigger check constraint cant < 0
-  AS
-    id_mascota_tmp number;
-
+create or replace procedure addUsuarioRegular(
+  pNombre Varchar2, pApellido Varchar2, pCedula number,
+  pFecha_nacimiento Date, pTelefono number, pCorreo varchar2,
+  pId_pais number, pId_provincia number, pId_Canton number, 
+  pDireccion_exacta varchar2, pNombre_Usuario varchar2, 
+  pContrasenna varchar2)
+  AS 
+    id_usuario_tmp number;
+    id_direccion_tmp number;
+    id_telefono_tmp number;
+    id_correo_tmp number;
   begin
-
-    id_mascota_tmp := sec_mascota.nextval;
-
-    insert into mascota (id_mascota, nombre_mascota, foto_anterior, foto_despues, id_estado_crecimiento,
-
-        id_estado_fisico, id_motivo_devolucion,id_raza_mascota,id_tamanio_mascota, id_color_mascota, id_facilidad_entrenamiento,
-        id_actividad_fisica, id_nivel_energia, id_duennoAnterior, id_estado_adopcion, Cantidad_devoluciones)
-
-
-    values (id_mascota_tmp, pnombre_mascota, pfoto_anterior, pfoto_despues, pid_estado_crecimiento, pid_estado_fisico, pid_motivo_devolucion, pid_raza_mascota, pid_tamanio_mascota, pid_color_mascota, pid_facilidad_entrenamiento, pid_actividad_fisica, pid_nivel_energia, pid_duennoAnterior, pid_estado_adopcion, pcantidad_devoluciones);
-
-
-
-    end;
+    id_usuario_tmp := sec_persona.nextval;
+    id_direccion_tmp := sec_direccion.nextval;
+    id_telefono_tmp := sec_telefono.nextval;
+    id_correo_tmp := sec_correo.nextval;
+    insert into usuarios(Username, Contrasenia, id_tipo_usuario)
+      values (pNombre_Usuario, pContrasenna, 3);
+    insert into direccion(id_direccion, direccion_exacta, id_pais, id_provincia, id_canton)
+      values(id_direccion_tmp, pDireccion_exacta, pid_pais, pid_provincia, pid_canton);
+    insert into correo(id_correo, correo, id_persona)
+      values(id_correo_tmp, pCorreo, id_usuario_tmp);
+    insert into persona(id_persona, cedula_persona, nombre, apellido, fecha_nacimiento, tipo_usuario, usuario_username, id_direccion)
+      values (id_usuario_tmp, pcedula, pnombre, papellido, pfecha_nacimiento, 3, pnombre_usuario, id_direccion_tmp);
+    insert into telefono (id_telefono, numero_telefono, id_persona)
+      values (id_telefono_tmp, ptelefono, id_usuario_tmp);
+    insert into adoptante(id_adoptante, notas_adoptante)
+      values (id_usuario_tmp, NULL);
+  exception
+    when dup_val_on_index then 
+      dbms_output.put_line('Error, ese id ya está en uso.');
+       rollback;
+    when value_error then
+      dbms_output.put_line('Error, tipo de dato.');
+       rollback;
+  end;
+commit;

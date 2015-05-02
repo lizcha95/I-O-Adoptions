@@ -8,14 +8,18 @@ create or replace procedure addUsuarioRegular(
     id_usuario_tmp number;
     id_direccion_tmp number;
     id_telefono_tmp number;
+    id_correo_tmp number;
   begin
     id_usuario_tmp := sec_persona.nextval;
     id_direccion_tmp := sec_direccion.nextval;
     id_telefono_tmp := sec_telefono.nextval;
+    id_correo_tmp := sec_correo.nextval;
     insert into usuarios(Username, Contrasenia, id_tipo_usuario)
       values (pNombre_Usuario, pContrasenna, 3);
     insert into direccion(id_direccion, direccion_exacta, id_pais, id_provincia, id_canton)
       values(id_direccion_tmp, pDireccion_exacta, pid_pais, pid_provincia, pid_canton);
+    insert into correo(id_correo, correo, id_persona)
+      values(id_correo_tmp, pCorreo, id_usuario_tmp);
     insert into persona(id_persona, cedula_persona, nombre, apellido, fecha_nacimiento, tipo_usuario, usuario_username, id_direccion)
       values (id_usuario_tmp, pcedula, pnombre, papellido, pfecha_nacimiento, 3, pnombre_usuario, id_direccion_tmp);
     insert into telefono (id_telefono, numero_telefono, id_persona)
@@ -24,7 +28,7 @@ create or replace procedure addUsuarioRegular(
       values (id_usuario_tmp, NULL);
   exception
     when dup_val_on_index then 
-      dbms_output.put_line('Error, ese id ya est√° en uso.');
+      dbms_output.put_line('Error, ese id ya est· en uso.');
        rollback;
     when value_error then
       dbms_output.put_line('Error, tipo de dato.');
