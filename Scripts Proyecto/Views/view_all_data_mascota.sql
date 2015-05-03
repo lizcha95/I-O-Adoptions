@@ -1,5 +1,5 @@
   create or replace view view_all_data_mascota as
-    select m.nombre_mascota, rm.raza_mascota, cm.color_mascota, af.actividad_fisica, ec.estado_crecimiento, ef.estado_fisico, 
+    select m.id_mascota, m.nombre_mascota, rm.raza_mascota, cm.color_mascota, af.actividad_fisica, ec.estado_crecimiento, ef.estado_fisico, 
            fe.facilidad_entrenamiento, ne.nivel_energia, tam.tamanio_mascota, tim.tipo_mascota
     from mascota m , raza_mascota rm, color_mascota cm, actividad_fisica af, estado_crecimiento ec, estado_fisico ef, facilidad_entrenamiento fe,
          nivel_energia ne, tamanio_mascota tam , tipo_mascota tim

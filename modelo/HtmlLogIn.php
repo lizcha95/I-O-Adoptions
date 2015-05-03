@@ -18,6 +18,9 @@
                     if(data == 1){
                         document.location.href="index.php?Usuario="+document.getElementById("Usuario").value;    
                     }
+                    else{
+                        window.alert("Usuario o contraseña inválido");
+                    }
                 }
             });
         });

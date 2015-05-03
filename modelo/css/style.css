@@ -42,7 +42,7 @@ header {width:227px; float:left}
 #menu > li > a:hover strong, #menu > li > a.active strong{}
 /* ============================= content ====================== */
 
-#content {margin-left:50px; margin-top: 25px; width:1050px; float:left;position:relative}
+#content {margin-left:50px; margin-top: 25px; width:950px; float:left;position:relative}
 #content > ul > li {position:relative;height:100%;width:100%;bottom:0}
 .box1 {background:url(../images/bg_content.png) repeat;width:100%;height:100%;position:absolute;top:0px;left:0;}
 .inner {padding:25px 55px 25px 60px;position:relative}
@@ -55,7 +55,7 @@ header {width:227px; float:left}
 .pad_bot4{padding-bottom:25px; margin-top: 20px;}
 .marg_right1 {margin-right:29px}
 #page_Services .pad_bot3 {padding-bottom:15px}
-#content figure {padding-top:5px}
+#content figure {padding-top:10px}
 .button1 {display:inline-block;font-size:16px;color:#000;text-transform:uppercase;text-decoration:none;background:#fff;line-height:33px;position:relative}
 .button1 span {position:absolute;top:0;left:0;width:100%;height:100%;background:#000}
 .button1 strong {position:relative;font-weight:400;display:block;padding:0 14px;letter-spacing:-1px}
@@ -97,7 +97,7 @@ footer {font-size:16px;text-transform:uppercase;font-weight:400;line-height:40px
 footer a {color:#fff;text-decoration:none}
 footer a:hover {color:#808080}
 .col1 {width:150px;float:left}
-.col2 {width:690px;float:left;text-align:center}
+.col2 {width:650px;float:left;text-align:center}
 .col_1 {width:280px;float:left;margin-right: 40px;}
 .col_2{width:250px;float:left;text-align:center}
 .col_11{width: 260px;float:left;}
@@ -117,34 +117,80 @@ footer a:hover {color:#808080}
     margin-left: 10px;
     margin-bottom: 15px;
 }
-#botonSubirFoto{
+#botonsubirfoto{
     border-radius: 7px;
     background-color: black;
     color: white;
     text-align: center;
     margin-top: 10px;
-    font-family: Helvetica; font-size:15px;line-height:1.2em;padding:3px 0 3px 0;color:#fff;font-weight:700
+    font-family: Helvetica; 
+    font-size:15px;
+    line-height:1.2em;
+    padding:3px 0 3px 0;
+    color:#fff;
+    font-weight:700;
+    position: absolute;
+    top: 650px;
 }
 
-#botonSubirFoto:link {
+#botonsubirfoto:link {
     text-decoration:none;
     color:white;
     background-color:black ;
 } 
 
-#botonSubirFoto:visited {
+#botonsubirfoto:visited {
     text-decoration:none;
     color:white;
     background-color:black ;
 } 
 
-#botonSubirFoto:active {
+#botonsubirfoto:active {
     text-decoration:none;
     color:black;
     background-color:white ;
 } 
 
-#botonSubirFoto:hover {
+#botonsubirfoto:hover {
+    text-decoration:none;
+    color:black;
+    background-color:white ;
+}
+#botonguardarmascota{
+    border-radius: 7px;
+    background-color: black;
+    color: white;
+    text-align: center;
+    margin-top: 10px;
+    font-family: Helvetica; 
+    font-size:15px;
+    line-height:1.2em; 
+    padding:3px 0 3px 0; 
+    color:#fff; 
+    font-weight:700;
+    position: absolute;
+    left:400px;
+    top: 650px;
+}
+#botonguardarmascota:link {
+    text-decoration:none;
+    color:white;
+    background-color:black ;
+} 
+
+#botonguardarmascota:visited {
+    text-decoration:none;
+    color:white;
+    background-color:black ;
+} 
+
+#botonguardarmascota:active {
+    text-decoration:none;
+    color:black;
+    background-color:white ;
+} 
+
+#botonguardarmascota:hover {
     text-decoration:none;
     color:black;
     background-color:white ;

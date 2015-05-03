@@ -44,6 +44,7 @@
 					</header>
 <!--content -->
 					<article id="content">
+						<div class="ic">More Website Templates @ TemplateMonster.com -September 19th, 2011!</div>
 						<ul>
 							<li id="page_Home">
 								<div class="box1">
@@ -53,7 +54,7 @@
 											<div class="col_1">
 												<h2>Sobre I/O Adoptions</h2>
 												<figure><img src="images/page1_img2.jpg" alt="" class="pad_bot1"></figure>
-												<p class="pad_bot1">I/O Adoptions es una aplicación que nació por la necesidad de las personas costarricenses de tener un medio seguro donde puedan encontrar personas o familias que se ofrezcan a adoptar mascotas que son rescatadas o puestas en adopción por la falta de espacio o de tiempo de sus dueños actuales. El objetivo es que las mascotas puedan estar en manos de personas que se preocupan por los animales y puedan brindarles un hogar digno a perros, gatos y demás que lo necesitan.</p>
+												<p class="pad_bot1">I/O Adoptions es una organización que nació por la necesidad de las personas costarricenses de tener un medio seguro donde puedan encontrar personas o familias que se ofrezcan a adoptar mascotas que son rescatadas o puestas en adopción por la falta de espacio o de tiempo de sus dueños actuales. El objetivo es que las mascotas puedan estar en manos de personas que se preocupan por los animales y puedan brindarles un hogar digno a perros, gatos y demás que lo necesitan.</p>
 											</div>
 											<div class="col_2">
 												<h2>Eventos</h2>
@@ -74,9 +75,8 @@
 											</div>
 										</div>
 										<h2>Mascotas 2 meses</h2>
-                                        <p>No hay mascotas</p>
 										<div class="wrapper">
-											<p class="color1 pad_bot2"><strong> <!--aqui van las mascotas de dos meses--> </strong></p>
+											<p class="color1 pad_bot2"><strong>Lista de mascotas con 2 meses....</strong></p>
                                             
 										</div>
 									</div>
@@ -153,79 +153,81 @@
 									<div class="inner">
 										<a href="#" class="close" data-type="close"><span></span></a>
 								        <h2>Registra tu mascota</h2>
-                                        <table>
-                                            <tr>
-                                                <td><font id = "labels" color="white" face = Helvetica size="3">Nombre:</font></td>    
-                                                <td><input id="nombremascota" class="Opciones" type="text" name="nombremascota"></td>
-                                            </tr>
-                                            <tr>
-                                                <td><font id = "labels" color="white" face = Helvetica size="3">Tipo:</font></td>
-                                                <td><SELECT id = "tipo" class="Opciones" NAME="tipo" SIZE=1 > 
-                                                    <OPTION VALUE="1">Seleccionar</OPTION>
-                                                </SELECT></td>
-                                            </tr>
-                                            <tr>
-                                                <td><font id = "labels" color="white" face = Helvetica size="3">Raza:</font></td>
-                                                <td><SELECT id = "raza" class="Opciones" NAME="raza" SIZE=1 > 
-                                                    <OPTION VALUE="1">Seleccionar</OPTION>
-                                                </SELECT></td>
-                                            </tr>
-                                            <tr>
-                                                <td><font id = "labels" color="white" face = Helvetica size="3">Tamaño:</font></td>
-                                                <td><SELECT id = "tamano" class="Opciones" NAME="tamano" SIZE=1 > 
-                                                    <OPTION VALUE="1">Seleccionar</OPTION>
-                                                </SELECT></td>
-                                            </tr>
-                                            <tr>
-                                                <td><font id = "labels" color="white" face = Helvetica size="3">Color:</font></td>
-                                                <td><SELECT id = "color" class="Opciones" NAME="color" SIZE=1 > 
-                                                    <OPTION VALUE="1">Seleccionar</OPTION>
-                                                </SELECT></td>
-                                            </tr>
-                                            <tr>
-                                                <td><font id = "labels" color="white" face = Helvetica size="3">Estado de Crecimiento:</font></td>
-                                                <td><SELECT id = "estadocrecimiento" class="Opciones" NAME="estadocrecimiento" SIZE=1 > 
-                                                    <OPTION VALUE="1">Seleccionar</OPTION>
-                                                </SELECT></td>
-                                            </tr>
-                                            <tr>
-                                                <td><font id = "labels" color="white" face = Helvetica size="3">Estado Fisico:</font></td>
-                                                <td><SELECT id = "estadofisico" class="Opciones" NAME="estadofisico" SIZE=1 > 
-                                                    <OPTION VALUE="1">Seleccionar</OPTION>
-                                                </SELECT></td>
-                                            </tr>
-                                            <tr>
-                                                <td><font id = "labels" color="white" face = Helvetica size="3">Facilidad de Entrenamiento: </font></td>
-                                                <td><SELECT id = "facilidadentrenamiento" class="Opciones" NAME="facilidadentrenamiento" SIZE=1 > 
-                                                    <OPTION VALUE="1">Seleccionar</OPTION>
-                                                </SELECT></td>
-                                            </tr>
-                                            <tr>
-                                                <td><font id = "labels" color="white" face = Helvetica size="3">Nivel de Energía:</font></td>
-                                                <td><SELECT id = "nivelenergia" class="Opciones" NAME="nivelenergia" SIZE=1 > 
-                                                    <OPTION VALUE="1">Seleccionar</OPTION>
-                                                </SELECT></td>
-                                            </tr>
-                                            <tr>
-                                                <td><font id = "labels" color="white" face = Helvetica size="3">Actividad Fisica:</font></td>
-                                                <td><SELECT id = "actividadfisica" class="Opciones" NAME="actividadfisica" SIZE=1 > 
-                                                    <OPTION VALUE="1">Seleccionar</OPTION>
-                                                </SELECT></td>
-                                            </tr>
-                                            <tr>
-                                                <td><font id = "labels" color="white" face = Helvetica size="3">Cedula Dueño Anterior:</font></td>
-                                                <td><input id = "ceduladuenoAnterior" class="Opciones" NAME="duenoceduladuenoAnteriorAnterior" SIZE=1 >
-                                                </SELECT></td>
-                                            </tr>
-                                            <tr>
-                                                <td><IMG id= "imagen" SRC=""></IMG></td>
-                                            </tr>
-                                            <tr>
-                                                <td><div id = "botonSubirFoto" style="cursor: pointer" onclick="window.location='index.php'"> Subir Foto </div></td>
-                                             </tr>
-                                            <tr><td></td><td><div id = "botonSubirFoto" style="cursor: pointer" onclick="window.location='index.php'"> Registrar </div></td></tr>
-                                            
-                                        </table>
+                                        <form id="frmMascota">
+                                            <table>
+                                                <tr>
+                                                    <td><font id = "labels" color="white" face = Helvetica size="3">Nombre:</font></td>    
+                                                    <td><input id="nombremascota" class="Opciones" type="text" name="nombremascota"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><font id = "labels" color="white" face = Helvetica size="3">Tipo:</font></td>
+                                                    <td><SELECT id = "tipo" class="Opciones" NAME="tipo" SIZE=1 > 
+                                                        <OPTION VALUE="1">Seleccionar</OPTION>
+                                                    </SELECT></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><font id = "labels" color="white" face = Helvetica size="3">Raza:</font></td>
+                                                    <td><SELECT id = "raza" class="Opciones" NAME="raza" SIZE=1 > 
+                                                        <OPTION VALUE="1">Seleccionar</OPTION>
+                                                    </SELECT></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><font id = "labels" color="white" face = Helvetica size="3">Tamaño:</font></td>
+                                                    <td><SELECT id = "tamano" class="Opciones" NAME="tamano" SIZE=1 > 
+                                                        <OPTION VALUE="1">Seleccionar</OPTION>
+                                                    </SELECT></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><font id = "labels" color="white" face = Helvetica size="3">Color:</font></td>
+                                                    <td><SELECT id = "color" class="Opciones" NAME="color" SIZE=1 > 
+                                                        <OPTION VALUE="1">Seleccionar</OPTION>
+                                                    </SELECT></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><font id = "labels" color="white" face = Helvetica size="3">Estado de Crecimiento:</font></td>
+                                                    <td><SELECT id = "estadocrecimiento" class="Opciones" NAME="estadocrecimiento" SIZE=1 > 
+                                                        <OPTION VALUE="1">Seleccionar</OPTION>
+                                                    </SELECT></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><font id = "labels" color="white" face = Helvetica size="3">Estado Fisico:</font></td>
+                                                    <td><SELECT id = "estadofisico" class="Opciones" NAME="estadofisico" SIZE=1 > 
+                                                        <OPTION VALUE="1">Seleccionar</OPTION>
+                                                    </SELECT></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><font id = "labels" color="white" face = Helvetica size="3">Facilidad de Entrenamiento: </font></td>
+                                                    <td><SELECT id = "facilidadentrenamiento" class="Opciones" NAME="facilidadentrenamiento" SIZE=1 > 
+                                                        <OPTION VALUE="1">Seleccionar</OPTION>
+                                                    </SELECT></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><font id = "labels" color="white" face = Helvetica size="3">Nivel de Energía:</font></td>
+                                                    <td><SELECT id = "nivelenergia" class="Opciones" NAME="nivelenergia" SIZE=1 > 
+                                                        <OPTION VALUE="1">Seleccionar</OPTION>
+                                                    </SELECT></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><font id = "labels" color="white" face = Helvetica size="3">Actividad Fisica:</font></td>
+                                                    <td><SELECT id = "actividadfisica" class="Opciones" NAME="actividadfisica" SIZE=1 > 
+                                                        <OPTION VALUE="1">Seleccionar</OPTION>
+                                                    </SELECT></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><font id = "labels" color="white" face = Helvetica size="3">Cedula Dueño Anterior:</font></td>
+                                                    <td><input id="ceduladuenoanterior" class="Opciones" NAME="ceduladuenoanterior" SIZE=1 >
+                                                    </SELECT></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><IMG id= "imagen" SRC=""></IMG></td>
+                                                </tr>
+                                                <tr>
+                                                    <button id="botonsubirfoto" class="botonsubirfoto" style="cursor: pointer" type="button"> Subir Foto </button>
+                                                 </tr>
+                                                <tr><button id="botonguardarmascota" class="botonguardarmascota" style="cursor: pointer" type="button"> Registrar </button></tr>
+
+                                            </table>
+                                        </form>
 									</div>
 								</div>
 							</li>
@@ -252,16 +254,16 @@
                                             <table>
                                                 <tr>
                                                     <td><figure class="left marg_right1"><a href="images/big_img1.jpg" class="lightbox-image" data-type="prettyPhoto[group2]"><span></span><img src="images/page3_img1.jpg" alt=""></a></figure></td>
-                                                    <td><p class = "datos">Nombre : Picos</p>
-                                                        <p class = "datos">Tipo : Puercoespín</p>
-                                                        <p class = "datos">Raza : Coendús</p>
+                                                    <td><p class = "datos persona">Nombre :</p>
+                                                <p class = "datos persona">Apellido :</p>
+                                                <p class = "datos persona">Correo :</p>
                                                 <a class = "botonDatos" style="cursor: pointer" href="#!/page_perfilPersona"> Ver Datos </a>
                                                 </tr>
                                                 <tr>
                                                     <td><figure class="left"><a href="images/big_img2.jpg" class="lightbox-image" data-type="prettyPhoto[group2]"><span></span><img src="images/page3_img2.jpg" alt=""></a></figure></td>
-                                                    <td><p class = "datos">Nombre : Melvin</p>
-                                                        <p class = "datos">Tipo : Perro</p>
-                                                        <p class = "datos">Raza : Dachshund</p>
+                                                    <td><p class = "datos persona">Nombre :</p>
+                                                <p class = "datos persona">Apellido :</p>
+                                                <p class = "datos persona">Correo :</p>
                                                 <a class = "botonDatos" style="cursor: pointer" href="#!/page_perfilPersona"> Ver Datos </a></td>                                     
                                                 </tr>
                                             </table>
@@ -277,38 +279,43 @@
 										<a href="#" class="close" data-type="close"><span></span></a>
 											<h2>Estadísticas</h2>
                                             <h2>Top 10 Mejores Adoptantes: </h2>
-                                                <p class = "tabular">1. Sandra Gonzáles</p>
-                                                <p class = "tabular">2. Roxana Ayala</p>
-                                                <p class = "tabular">3. Mario Ayala</p>
-                                                <p class = "tabular">4. Esther Reyes</p>
-                                                <p class = "tabular">5. Adrián Molina</p>
-                                                <p class = "tabular">6. Liza Chaves</p>
-                                                <p class = "tabular">7. Mariana Montero</p>
-                                                <p class = "tabular">8. Claudio Sosa</p>
-                                                <p class = "tabular">9. Jaime Chaves</p>
-                                                <p class = "tabular">10. Jeimi Carranza</p>
+                                                <p class = "tabular">1. Juanito de la Montaña Rodriguez</p>
+                                                <p class = "tabular">2. Don Claudio</p>
+                                                <p class = "tabular">3. Jaimito el Cartero</p>
+                                                <p class = "tabular">4. Juanito de la Montaña Rodriguez</p>
+                                                <p class = "tabular">5. Don Claudio</p>
+                                                <p class = "tabular">6. Jaimito el Cartero</p>
+                                                <p class = "tabular">7. Juanito de la Montaña Rodriguez</p>
+                                                <p class = "tabular">8. Don Claudio</p>
+                                                <p class = "tabular">9. Jaimito el Cartero</p>
+                                                <p class = "tabular">10. Jaimito el Cartero</p>
                                             <h2>Top 10 Motivos de Devolución: </h2>
-                                                <p class = "tabular">1. No tengo espacio</p>
-                                                <p class = "tabular">2. No se lleva bien con mis mascotas</p>
-                                                <p class = "tabular">3. Destruye los muebles de mi casa</p>
-                                                <p class = "tabular">4. No puedo mantenerlo</p>
-                                                <p class = "tabular">5. No sé cómo mantenerlo</p>
-                                                <p class = "tabular">6. Le afecta el clima del lugar</p>
-                                                <p class = "tabular">7. Se escapa frecuentemente</p>
-                                                <p class = "tabular">8. No le gustan las personas ajenas a la familia</p>
-                                                <p class = "tabular">9. Tuve un hijo y tuve que escoger devolver el animal</p>
-                                                <p class = "tabular">10. Tengo que salir del país por mucho tiempo</p>
+                                                <p class = "tabular">1. Viola mis peluches D:</p>
+                                                <p class = "tabular">2. Se come el papel higienico del basurero</p>
+                                                <p class = "tabular">3. Es demasiado bueno para mi, no lo merezco</p>
+                                                <p class = "tabular">4. Viola mis peluches D:</p>
+                                                <p class = "tabular">5. Se come el papel higienico del basurero</p>
+                                                <p class = "tabular">6. Es demasiado bueno para mi, no lo merezco</p>
+                                                <p class = "tabular">7. Viola mis peluches D:</p>
+                                                <p class = "tabular">8. Se come el papel higienico del basurero</p>
+                                                <p class = "tabular">9. Es demasiado bueno para mi, no lo merezco</p>
+                                                <p class = "tabular">10. Es demasiado bueno para mi, no lo merezco</p>
                                             <p class="pad_bot2 color1"><strong>Mascotas Registradas</strong></p>
-                                                <p class = "tabular">22</p>
+                                                <p class = "tabular">100</p>
                                             <p class="pad_bot2 color1"><strong>Mascotas Adoptadas: </strong></p>
-                                                <p class = "tabular">9</p>
+                                                <p class = "tabular">40</p>
                                             <p class="pad_bot2 color1"><strong>Mascotas esperando por ser adoptadas: </strong></p>
-                                                <p class = "tabular">13</p>
+                                                <p class = "tabular">60</p>
                                                 <p class = "tabular">Yoda</p>
                                                 <p class = "tabular">Piolin</p>
                                             <h2>Lista Negra: </h2>
-                                                <p class = "tabular">Liza Chaves</p>
+                                                <p class = "tabular">Liza Chavez</p>
                                                 <p class = "tabular">Ariel Herrera</p>
+                                                <p class = "tabular">Pablo Camacho</p>
+                                                <p class = "tabular">Beto Coto</p>
+                                                <p class = "tabular">Carlos Mora</p>
+                                                <p class = "tabular">Ana Castillo</p>
+                                                <p class = "tabular">Yolanda Nuñez</p>
 									</div>
 								</div>
 							</li>
@@ -333,7 +340,7 @@
 											</div>
 											<div class="col_12 pad_left1">
 												<h2>Nuestra ubicación</h2>
-												<figure><script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script><div style="overflow:hidden;height:210px;width:280px;"><div id="gmap_canvas" style="height:210px;width:280px;"></div><style>#gmap_canvas img{max-width:none!important;background:none!important}</style><a class="google-map-code" href="http://premium-wordpress-themes.org" id="get-map-data">http://premium-wordpress-themes.org</a></div><script type="text/javascript"> function init_map(){var myOptions = {zoom:14,center:new google.maps.LatLng(9.9393902,-84.04676740000002),mapTypeId: google.maps.MapTypeId.ROADMAP};map = new google.maps.Map(document.getElementById("gmap_canvas"), myOptions);marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(9.9393902, -84.04676740000002)});infowindow = new google.maps.InfoWindow({content:"<b>San Jos&eacute;</b><br/>Calle La Cruz<br/>11502 Mercedes" });google.maps.event.addListener(marker, "click", function(){infowindow.open(map,marker);});infowindow.open(map,marker);}google.maps.event.addDomListener(window, 'load', init_map);</script></figure>
+												<!--<figure><script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script><div style="overflow:hidden;height:210px;width:280px;"><div id="gmap_canvas" style="height:210px;width:280px;"></div><style>#gmap_canvas img{max-width:none!important;background:none!important}</style><a class="google-map-code" href="http://premium-wordpress-themes.org" id="get-map-data">http://premium-wordpress-themes.org</a></div><script type="text/javascript"> function init_map(){var myOptions = {zoom:14,center:new google.maps.LatLng(9.9393902,-84.04676740000002),mapTypeId: google.maps.MapTypeId.ROADMAP};map = new google.maps.Map(document.getElementById("gmap_canvas"), myOptions);marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(9.9393902, -84.04676740000002)});infowindow = new google.maps.InfoWindow({content:"<b>San Jos&eacute;</b><br/>Calle La Cruz<br/>11502 Mercedes" });google.maps.event.addListener(marker, "click", function(){infowindow.open(map,marker);});infowindow.open(map,marker);}google.maps.event.addDomListener(window, 'load', init_map);</script></figure>-->
 											</div>
 										</div>
 										<h2>Contáctenos</h2>
@@ -352,12 +359,9 @@
 													<textarea name="textarea" cols="1" rows="1"></textarea>
 												</div>
 												<div class="wrapper">
-                                                    
 													<span>&nbsp;</span>
-													<a href="#" class="button2" onClick="document.getElementById('ContactForm').reset()"><span></span><strong>Borrar</strong></a>
-                                                    
+													<a href="#" class="button1" onClick="document.getElementById('ContactForm').reset()"><span></span><strong>Borrar</strong></a>
 													<a href="#" class="button1" onClick="document.getElementById('ContactForm').submit()"><span></span><strong>Enviar</strong></a>
-                                                    
 												</div>
 											</div>
 										</form>
@@ -378,26 +382,10 @@
 										<a href="#" class="close" data-type="close"><span></span></a>
                                         <h2>Test de Compatibilidad</h2>
                                         <h2>Pregunta #1</h2>
-                                        <h2>¿Qué clase de mascota busca?</h2>
-                                        <table>
-                                            <tr>
-                                                <label class="block"><input type="radio" name="radgroup" value="A">Perro</label>                                                  
-                                                <label class="block"><input type="radio" name="radgroup" value="B">Gato</label>
-                                                <br></br>
-                                                <label class="block"><input type="radio"name="radgroup"value="C">Puercespín</label>
-                                                <br></br>
-                                                <label class="block"><input type="radio" name="radgroup" value="D">Hámster</label>
-                                                <br></br>
-<!--                                                <td><INPUT class = "radio" TYPE="radio" NAME="primeraOpcion" VALUE="y"></td>
-                                                <td><p class = "Radio">Perro</p></td>
-                                                <td><INPUT class = "radio" TYPE="radio" NAME="segundaOpcion" VALUE="n"></td>
-                                                <td><p class = "Radio">Gato</p></td>
-                                                <td><INPUT class = "radio" TYPE="radio" NAME="terceraOpcion" VALUE="n"></td>
-                                                <td><p class = "Radio">Puercoespín</p></td>
-                                                <td><INPUT class = "radio" TYPE="radio" NAME="cuartaOpcion" VALUE="n"></td>
-                                                <td><p class = "Radio">Hámster</p></td>-->
-                                            </tr>                                        
-                                        </table>
+                                        <p>Respuesta 1</p>
+                                        <p>Respuesta 2</p>
+                                        <p>Respuesta 3</p>
+                                        <p>Respuesta 4</p>
                                         <a href = "" class="button1"><span></span><strong>Siguiente</strong></a>
                                         
 									</div>
@@ -409,19 +397,40 @@
 										<a href="#" class="close" data-type="close"><span></span></a>
                                         <div class="wrapper tabs">
 											<div class="col1">
-												<h2>Categorías</h2>
+												<h2>Categories</h2>
 												<ul class="nav">
-													<li class="selected"><a href="#Fashion"><span></span><strong>Todos</strong></a></li>
-													<li><a href="#Objects"><span></span><strong></strong></a></li>
+													<li class="selected"><a href="#Fashion"><span></span><strong>Perros</strong></a></li>
+													<li><a href="#Objects"><span></span><strong>Gatos</strong></a></li>
 												</ul>
 											</div>
-											<div class="col2">
-												<div class="tab-content" id="Fashion">
-													<h2>Todos</h2>
+											<div class="col_2">
+												<div class="tab-content">
+													<h2>Perros</h2>
 													<div class="wrapper">
                                                         <table id="TableMascotas">
-                                                            
                                                         </table>
+													</div>
+												</div>
+												<div class="tab-content" id="Objects">
+													<h2>Gatos</h2>
+													<div class="wrapper">
+                                                        <table>
+                                                        <tr>
+                                                            <td><figure class="left marg_right1"><a href="images/big_img1.jpg" class="lightbox-image" data-type="prettyPhoto[group2]"><span></span><img src="images/page3_img1.jpg" alt=""></a></figure></td>
+                                                            <td><p class = "datos">Nombre :</p>
+                                                        <p class = "datos">Tipo :</p>
+                                                        <p class = "datos">Raza :</p>
+                                                            <a class = "botonDatos" style="cursor: pointer" href="#!/page_perfilMascota"> Ver Datos </a></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><figure class="left marg_right1"><a href="images/big_img1.jpg" class="lightbox-image" data-type="prettyPhoto[group2]"><span></span><img src="images/page3_img1.jpg" alt=""></a></figure></td>
+                                                            <td><p class = "datos">Nombre :</p>
+                                                        <p class = "datos">Tipo :</p>
+                                                        <p class = "datos">Raza :</p>
+                                                            <a class = "botonDatos" style="cursor: pointer" href="#!/page_perfilMascota"> Ver Datos </a></td>
+                                                        </tr>
+                                                        </table>
+														
 													</div>
 												</div>
                                             </div>
@@ -487,20 +496,21 @@
 			<div class="block"></div>
 		</div>
 		<script type="text/javascript"> Cufon.now(); </script>
-		<script>    
+		<script>
+            
         //codigo que se utiliza para sacar la información del usuario
 		$(window).load(function() {
 			$('.spinner').fadeOut();
 			$('body').css({overflow:'inherit'})
 		})
-        var usuario = "<?php echo $Usuario = ($_GET["Usuario"]);?>";
+        var usuario = "<?php echo $Usuario = $_GET["Usuario"];?>";
+        console.log(usuario);
         $.ajax({
             url: 'php/obtieneInfoUsuarios.php',
             type: 'get',
             dataType: 'json',
             data: {Usuario: usuario},
             success: function(data){
-                console.log(data.nombre);
                 document.getElementById("NombreCompleto").innerHTML = data.nombre+' '+data.apellido;
                 document.getElementById("FechNac").innerHTML = data.fechaNacimiento;
                 document.getElementById("Telefono").innerHTML = data.telefono;
@@ -522,6 +532,7 @@
                 }
             }
         });
+        
         $.ajax({
             url: 'php/obtieneInfoMascota.php',
             type: 'get',
@@ -544,8 +555,12 @@
                             .text(info.raza)
                     );
                 });
+                document.getElementById("NombreCompleto").innerHTML = data.nombre+' '+data.apellido;
+                document.getElementById("FechNac").innerHTML = data.fechaNacimiento;
+                document.getElementById("Telefono").innerHTML = data.telefono;
             }
-        });
+        });                                                   
+        
         function setInSelects(phpFile, select, parameter){
             $.ajax({
                 url: phpFile,
@@ -578,6 +593,22 @@
                 var idTipo = $(this).val();
                 setInSelects('php/get_razas_mascotas.php', "#raza", idTipo);            
             }); 
+            $("#botonguardarmascota").click(function(){
+                $.ajax({
+                    url: 'php/agregar_mascota.php',
+                    type: 'get',
+                    dataType: 'json',
+                    data: $("#frmMascota").serialize(),
+                    success: function(data){
+                        if (data == true){
+                            window.alert("La mascota ha sido registrada");
+                        }
+                        else{
+                            window.alert("La mascota no ha sido registrada");
+                        }
+                    }
+                });
+            });
         });
 		</script>
 	</body>

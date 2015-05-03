@@ -13,3 +13,7 @@ values(sec_mascota.nextval, 35678908, 'Babagge', '', '', 3, 1, 5, 3, 1, 1, 1, 1,
 commit;
 
 select * from mascota
+
+begin 
+  addmascota('LOLOLOLOL',1,1,1,1,1,1,1,1,1,109870654,2,0);
+end;  

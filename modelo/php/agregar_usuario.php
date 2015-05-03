@@ -32,8 +32,6 @@ oci_bind_by_name($stid, ':pDireccion_exacta', $Direccion);
 oci_bind_by_name($stid, ':pNombre_Usuario', $Usuario);
 oci_bind_by_name($stid, ':pContrasena', $Contrasena);
 
-echo $Nombre.', '.$Apellido.', '.$Cedula.', '.$Fecha.', '.$Telefono.', '.$Correo.', '.$Pais.', '.$Provincia.', '.$Canton.', '.$Direccion.', '.$Usuario.', '.$Contrasena;
-
 oci_execute($stid);
 oci_commit($conn);
 oci_free_statement($stid);
