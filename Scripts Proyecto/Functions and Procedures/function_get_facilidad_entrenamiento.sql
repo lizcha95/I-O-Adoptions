@@ -1,18 +1,15 @@
-CREATE OR REPLACE FUNCTION gettamano
+CREATE OR REPLACE FUNCTION get_facilidad_entrenamiento
        RETURN tableType PIPELINED IS
            rec recordType := recordType(NULL,NULL);
        BEGIN
          FOR item in (
-           SELECT tm.id_tamanio, tm.tamanio_mascota
-              FROM tamanio_mascota tm
+           SELECT fe.id_facilidad_entrenamiento, fe.facilidad_entrenamiento
+              FROM facilidad_entrenamiento fe
          )
          LOOP
-         rec.id := item.id_tamanio;
-         rec.nombre := item.tamanio_mascota;
+         rec.id := item.id_facilidad_entrenamiento;
+         rec.nombre := item.facilidad_entrenamiento;
          PIPE ROW (rec);
          END LOOP;
          RETURN;
-       END gettamano;
-       
---TEST
-Select *  from TABLE(gettamano());
+       END get_facilidad_entrenamiento;

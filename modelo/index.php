@@ -156,66 +156,65 @@
                                         <table>
                                             <tr>
                                                 <td><font id = "labels" color="white" face = Helvetica size="3">Nombre:</font></td>    
-                                                <td><input id="NombreMascota" class="Opciones" type="text" name="nombre"></td>
+                                                <td><input id="nombremascota" class="Opciones" type="text" name="nombremascota"></td>
                                             </tr>
                                             <tr>
                                                 <td><font id = "labels" color="white" face = Helvetica size="3">Tipo:</font></td>
-                                                <td><SELECT id = "Tipo" class="Opciones" NAME="tipo" SIZE=1 > 
+                                                <td><SELECT id = "tipo" class="Opciones" NAME="tipo" SIZE=1 > 
                                                     <OPTION VALUE="1">Seleccionar</OPTION>
                                                 </SELECT></td>
                                             </tr>
                                             <tr>
                                                 <td><font id = "labels" color="white" face = Helvetica size="3">Raza:</font></td>
-                                                <td><SELECT id = "Raza" class="Opciones" NAME="raza" SIZE=1 > 
+                                                <td><SELECT id = "raza" class="Opciones" NAME="raza" SIZE=1 > 
                                                     <OPTION VALUE="1">Seleccionar</OPTION>
                                                 </SELECT></td>
                                             </tr>
                                             <tr>
                                                 <td><font id = "labels" color="white" face = Helvetica size="3">Tamaño:</font></td>
-                                                <td><SELECT id = "Tamano" class="Opciones" NAME="tamano" SIZE=1 > 
+                                                <td><SELECT id = "tamano" class="Opciones" NAME="tamano" SIZE=1 > 
                                                     <OPTION VALUE="1">Seleccionar</OPTION>
                                                 </SELECT></td>
                                             </tr>
                                             <tr>
                                                 <td><font id = "labels" color="white" face = Helvetica size="3">Color:</font></td>
-                                                <td><SELECT id = "Color" class="Opciones" NAME="color" SIZE=1 > 
+                                                <td><SELECT id = "color" class="Opciones" NAME="color" SIZE=1 > 
                                                     <OPTION VALUE="1">Seleccionar</OPTION>
                                                 </SELECT></td>
                                             </tr>
                                             <tr>
                                                 <td><font id = "labels" color="white" face = Helvetica size="3">Estado de Crecimiento:</font></td>
-                                                <td><SELECT id = "EstadoCrecimiento" class="Opciones" NAME="estadocrecimiento" SIZE=1 > 
+                                                <td><SELECT id = "estadocrecimiento" class="Opciones" NAME="estadocrecimiento" SIZE=1 > 
                                                     <OPTION VALUE="1">Seleccionar</OPTION>
                                                 </SELECT></td>
                                             </tr>
                                             <tr>
                                                 <td><font id = "labels" color="white" face = Helvetica size="3">Estado Fisico:</font></td>
-                                                <td><SELECT id = "EstadoFisico" class="Opciones" NAME="estadofisico" SIZE=1 > 
+                                                <td><SELECT id = "estadofisico" class="Opciones" NAME="estadofisico" SIZE=1 > 
                                                     <OPTION VALUE="1">Seleccionar</OPTION>
                                                 </SELECT></td>
                                             </tr>
                                             <tr>
                                                 <td><font id = "labels" color="white" face = Helvetica size="3">Facilidad de Entrenamiento: </font></td>
-                                                <td><SELECT id = "FacilidadEstrenamiento" class="Opciones" NAME="facilidadentrenamiento" SIZE=1 > 
+                                                <td><SELECT id = "facilidadentrenamiento" class="Opciones" NAME="facilidadentrenamiento" SIZE=1 > 
                                                     <OPTION VALUE="1">Seleccionar</OPTION>
                                                 </SELECT></td>
                                             </tr>
                                             <tr>
                                                 <td><font id = "labels" color="white" face = Helvetica size="3">Nivel de Energía:</font></td>
-                                                <td><SELECT id = "NivelEnergia" class="Opciones" NAME="nivelenergia" SIZE=1 > 
+                                                <td><SELECT id = "nivelenergia" class="Opciones" NAME="nivelenergia" SIZE=1 > 
                                                     <OPTION VALUE="1">Seleccionar</OPTION>
                                                 </SELECT></td>
                                             </tr>
                                             <tr>
                                                 <td><font id = "labels" color="white" face = Helvetica size="3">Actividad Fisica:</font></td>
-                                                <td><SELECT id = "ActividadFisica" class="Opciones" NAME="actividadfisica" SIZE=1 > 
+                                                <td><SELECT id = "actividadfisica" class="Opciones" NAME="actividadfisica" SIZE=1 > 
                                                     <OPTION VALUE="1">Seleccionar</OPTION>
                                                 </SELECT></td>
                                             </tr>
                                             <tr>
-                                                <td><font id = "labels" color="white" face = Helvetica size="3">Enfermedades:</font></td>
-                                                <td><SELECT id = "Enfermedades" class="Opciones" NAME="enfermedades" SIZE=1 > 
-                                                    <OPTION VALUE="1">Seleccionar</OPTION>
+                                                <td><font id = "labels" color="white" face = Helvetica size="3">Cedula Dueño Anterior:</font></td>
+                                                <td><input id = "ceduladuenoAnterior" class="Opciones" NAME="duenoceduladuenoAnteriorAnterior" SIZE=1 >
                                                 </SELECT></td>
                                             </tr>
                                             <tr>
@@ -551,6 +550,7 @@
             dataType: 'json',
             data: {Usuario: usuario},
             success: function(data){
+                console.log(data.nombre);
                 document.getElementById("NombreCompleto").innerHTML = data.nombre+' '+data.apellido;
                 document.getElementById("FechNac").innerHTML = data.fechaNacimiento;
                 document.getElementById("Telefono").innerHTML = data.telefono;
@@ -572,46 +572,38 @@
                 }
             }
         });
-        $.ajax({
-            url: 'php/get_tipos_mascotas.php',
-            type: 'get',
-            dataType: 'json',
-            data: {},
-            success: function(data){
-                $("#Tipo").html("<option value='0'>Seleccionar</option>");
-                $.each(data, function(index, tipoMascota){
-                    $("#Tipo").append(
-                        $("<option></option>")
-                        .text(tipoMascota.tipo_mascota)
-                        .val(tipoMascota.id_tipo_mascota)
-                    );
-                });   
-
-            }
-        });
-        function setDropdownRazas(idTipo){
+        
+        function setInSelects(phpFile, select, parameter){
             $.ajax({
-                url: 'php/get_razas_mascotas.php',
+                url: phpFile,
                 type: 'get',
                 dataType: 'json',
-                data: {tipo:idTipo},
+                data: {pParam:parameter},
                 success: function(data){
-                    $("#Raza").html("<option value='0'>Seleccionar</option>");
-                    $.each(data, function(index, razaMascota){
-                        $("#Raza").append(
+                    $(select).html("<option value='0'>Seleccionar</option>");
+                    $.each(data, function(index, info){
+                        $(select).append(
                             $("<option></option>")
-                            .text(razaMascota.descripcion)
-                            .val(razaMascota.id)
+                            .text(info.descripcion)
+                            .val(info.id)
                         );
                     });   
 
-                }
+                }   
             });
         }
+        setInSelects('php/get_tipos_mascotas.php', "#tipo", 0);
+        setInSelects('php/get_actividad_fisica.php', "#actividadfisica", 0);
+        setInSelects('php/get_color.php', "#color", 0);
+        setInSelects('php/get_tamano.php', "#tamano", 0);
+        setInSelects('php/get_estado_crecimiento.php', "#estadocrecimiento", 0);
+        setInSelects('php/get_estados_fisicos.php', "#estadofisico", 0);
+        setInSelects('php/get_facilidad_entrenamiento.php', "#facilidadentrenamiento", 0);
+        setInSelects('php/get_nivel_energias.php', "#nivelenergia", 0);
         $(document).ready(function(){
-            $("#Tipo").change(function(){
+            $("#tipo").change(function(){
                 var idTipo = $(this).val();
-                setDropdownRazas(idTipo);            
+                setInSelects('php/get_razas_mascotas.php', "#raza", idTipo);            
             }); 
         });
 		</script>

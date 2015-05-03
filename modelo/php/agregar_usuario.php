@@ -35,9 +35,7 @@ oci_bind_by_name($stid, ':pContrasena', $Contrasena);
 echo $Nombre.', '.$Apellido.', '.$Cedula.', '.$Fecha.', '.$Telefono.', '.$Correo.', '.$Pais.', '.$Provincia.', '.$Canton.', '.$Direccion.', '.$Usuario.', '.$Contrasena;
 
 oci_execute($stid);
-
 oci_commit($conn);
-$e = oci_error($stid);
 oci_free_statement($stid);
 oci_close($conn);
 

@@ -14,22 +14,21 @@ if(isset($_GET["Usuario"]))
     
     oci_execute($stid);
     $col = oci_fetch_array($stid);
-    $cedula = $col[0];
+    $cedula = strval($col[0]);
     $nombre = $col[1];
     $apellido = $col[2];
     $FechaNacimiento = $col[3];
-    $telefono = $col[4];
+    $telefono = strval($col[4]);
     $correo = $col[5];
-    $nombre_pais = $col[6];
-    $nombre_provincia = $col[7];
-    $nombre_canton = $col[8];
+    $nombre_pais = utf8_encode($col[6]);
+    $nombre_provincia = utf8_encode($col[7]);
+    $nombre_canton = utf8_encode($col[8]);
     $direccion_exacta = $col[9];
     $notas_adoptante = $col[10];
     
     $resultado = array("cedula" => $cedula, "nombre" => $nombre, "apellido" => $apellido, "fechaNacimiento" => $FechaNacimiento, 
                       "telefono" => $telefono, "correo" => $correo, "pais" => $nombre_pais, "provincia" => $nombre_provincia, 
                       "canton" => $nombre_canton, "direcEx" => $direccion_exacta, "notAdopt" => $notas_adoptante);
-
     echo json_encode($resultado, JSON_UNESCAPED_UNICODE);
     oci_free_statement($stid);
     oci_close($conn);

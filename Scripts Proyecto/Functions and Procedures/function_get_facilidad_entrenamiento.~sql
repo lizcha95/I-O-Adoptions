@@ -1,4 +1,4 @@
-CREATE OR REPLACE FUNCTION get_tamano
+CREATE OR REPLACE FUNCTION gettamano
        RETURN tableType PIPELINED IS
            rec recordType := recordType(NULL,NULL);
        BEGIN
@@ -12,7 +12,7 @@ CREATE OR REPLACE FUNCTION get_tamano
          PIPE ROW (rec);
          END LOOP;
          RETURN;
-       END get_tamano;
+       END gettamano;
        
 --TEST
-Select *  from TABLE(get_facilidad_entrenamiento());
+Select *  from TABLE(gettamano());

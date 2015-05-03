@@ -67,7 +67,7 @@
                     dataType: 'json',
                     data: $("#frmUsuario").serialize(),
                     success: function(data){
-                        
+                        document.location.href="HtmlLogIn.php";    
                     }
                 });
             });
@@ -142,7 +142,7 @@
                 <td><IMG id= "imagen" SRC=""></IMG></td>
             </tr>
             <tr>
-                <td><button type = "button" id = "botonSubirFoto" style="cursor: pointer" onclick="window.location='HtmlLogIn.php'"> Subir Foto </div></td>
+                <td><button type = "button" id = "botonSubirFoto" style="cursor: pointer"> Subir Foto </div></td>
              </tr>
          </table>
          
