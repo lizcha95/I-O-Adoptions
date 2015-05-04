@@ -311,6 +311,16 @@
 									</div>
 								</div>
 							</li>
+                
+							<li id="page_Mapa">
+								<div class="box1 more">
+									<div class="inner">
+										<a href="#" class="close" data-type="close"><span></span></a>
+                                        <embed src="manual.pdf" width="700" height="800">                                    
+                                    </div>
+								</div>
+							</li>
+                
 							<li id="page_Mapa">
 								<div class="box1 more">
 									<div class="inner">
