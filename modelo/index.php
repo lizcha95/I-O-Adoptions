@@ -37,6 +37,7 @@
 								<li><a href="#!/page_Portfolio"><span></span><strong>Dar en Adopción</strong></a></li>
                                 <li><a href="#!/page_Busquedas"><span></span><strong>Búsquedas</strong></a></li>
 								<li><a href="#!/page_Services"><span></span><strong>Estadísticas</strong></a></li>
+                                <li><a href="#!/page_Mapa"><span></span><strong>Manual de Uso</strong></a></li>
 								<li><a href="#!/page_Contact"><span></span><strong>Contáctenos</strong></a></li>
                                 <li><a href="HtmlLogIn.php"><span></span><strong>Cerrar Sesión</strong></a></li>
 							</ul>
@@ -304,14 +305,21 @@
                                                 <p class = "tabular">9</p>
                                             <p class="pad_bot2 color1"><strong>Mascotas esperando por ser adoptadas: </strong></p>
                                                 <p class = "tabular">13</p>
-                                                <p class = "tabular">Yoda</p>
-                                                <p class = "tabular">Piolin</p>
                                             <h2>Lista Negra: </h2>
                                                 <p class = "tabular">Liza Chaves</p>
                                                 <p class = "tabular">Ariel Herrera</p>
 									</div>
 								</div>
 							</li>
+							<li id="page_Mapa">
+								<div class="box1 more">
+									<div class="inner">
+										<a href="#" class="close" data-type="close"><span></span></a>
+                                        <embed src="manual.pdf" width="700" height="800">                                    
+                                    </div>
+								</div>
+							</li>
+                       
 							<li id="page_Contact">
 								<div class="box1">
 									<div class="inner">
@@ -354,7 +362,7 @@
 												<div class="wrapper">
                                                     
 													<span>&nbsp;</span>
-													<a href="#" class="button2" onClick="document.getElementById('ContactForm').reset()"><span></span><strong>Borrar</strong></a>
+													<a href="#" class="button1" onClick="document.getElementById('ContactForm').reset()"><span></span><strong>Borrar</strong></a>
                                                     
 													<a href="#" class="button1" onClick="document.getElementById('ContactForm').submit()"><span></span><strong>Enviar</strong></a>
                                                     
@@ -381,7 +389,7 @@
                                         <h2>¿Qué clase de mascota busca?</h2>
                                         <table>
                                             <tr>
-                                                <label class="block"><input type="radio" name="radgroup" value="A">Perro</label>                                                  
+                                                <label class="block"><input type="radio" name="radgroup" value="A">Perro</label>                                                           <br></br>
                                                 <label class="block"><input type="radio" name="radgroup" value="B">Gato</label>
                                                 <br></br>
                                                 <label class="block"><input type="radio"name="radgroup"value="C">Puercespín</label>
