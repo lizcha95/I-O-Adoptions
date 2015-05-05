@@ -69,7 +69,7 @@
                     success: function(data){
                         if (data==true){
                             window.alert("El Usuario ha sido registrado");
-                            //document.location.href="HtmlLogIn.php";
+                            document.location.href="HtmlLogIn.php";
                         }
                         else{
                             window.alert("El Usuario no ha sido registrado");
